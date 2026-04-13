@@ -35,7 +35,36 @@ with adjustable quantities. Use this for the ShiftMap landing page "Buy Now" but
 
 ---
 
+## Landing Page (index.html) — created 2026-04-13
+
+Single-file static landing page at `/index.html`. No external frameworks; Google Fonts only.
+
+### Sections
+1. **Hero** — tagline, sub-headline, CTA → Starter Stripe link, 3 stats (24h / 3-5 priorités / 97€)
+2. **Problème** — 3 pain-point cards (trop de cas d'usage, pas de temps, peur du projet lourd)
+3. **Solution** — 3-step flow (questionnaire → analyse IA → feuille de route en 24h)
+4. **Tarifs** — 3 pricing cards with real Stripe per-product links (Starter 97€ / Pro 147€ / AI Advisor 99€/mois)
+5. **Témoignages** — 3 placeholder testimonials (SME decision-makers)
+6. **FAQ** — 5 questions, CSS-only accordion (no JS)
+7. **CTA finale** — → Starter Stripe link
+8. **Footer** — ShiftMap © 2025, mentions légales placeholder, contact@shiftmap.fr
+
+### Design
+- Palette: dark navy `#0B1D33` / white / electric blue `#1D6EFF`
+- Fonts: Fraunces (display/serif) + DM Sans (body)
+- Mobile responsive (breakpoints at 900px and 600px)
+- Fade-up scroll animations via IntersectionObserver
+- SEO meta tags: feuille de route IA, PME, transformation digitale
+
+### Stripe links used
+- Starter CTA → `https://buy.stripe.com/eVq00k3HeaH536qcsXeOB35`
+- Pro CTA → `https://buy.stripe.com/eVq7sM3He8yX6iC8cHeOB36`
+- AI Advisor CTA → `https://buy.stripe.com/6oUdRa6Tq9D14au50veOB37`
+
+---
+
 ## Repository Structure
 
-- Next.js (App Router) deployed on Vercel at https://capia.nanocorp.app
-- Git repo: nanocorp-hq/capia, main branch → auto-deploys to Vercel
+- Static `index.html` at repo root (no Next.js yet)
+- Git repo: nanocorp-hq/capia, main branch
+- Vercel deployment target: https://capia.nanocorp.app (Next.js auto-detect pending setup)
