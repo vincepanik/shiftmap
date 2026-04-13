@@ -108,3 +108,24 @@ Single-file static landing page at `/index.html`. No external frameworks; Google
   - URL: `https://github.com/vincepanik/shiftmap`
   - Created at: `2026-04-13T19:58:05Z`
   - Export strategy: keep existing `origin` pointed at `nanocorp-hq/capia`; add a second remote for the GitHub export
+
+### Export Completion (2026-04-13)
+
+- Second remote added: `shiftmap -> https://github.com/vincepanik/shiftmap.git`
+- Local-only artifacts excluded from export via `.gitignore`: `.agents/`, `.claude/`
+- Branches pushed to GitHub export repo: `main`
+- Tags pushed: none
+- Total commits pushed on `main`: `10`
+- Export commit added during task: `386175e` `feat: initial ShiftMap landing page — French, Stripe-connected`
+- Key files pushed:
+  - `/index.html`
+  - `/package.json`
+  - `/next.config.ts`
+  - `/tsconfig.json`
+  - `/README.md`
+  - `/app/layout.tsx`
+  - `/app/page.tsx`
+  - `/app/globals.css`
+  - `/docs/shiftmap-landing-copy-fr-v1.md`
+  - `/docs/shiftmap-questionnaire-onboarding-mvp-fr.md`
+  - `/DOCS.md`
