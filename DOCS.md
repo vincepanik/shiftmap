@@ -79,3 +79,32 @@ Single-file static landing page at `/index.html`. No external frameworks; Google
 - Live URL: **https://capia.nanocorp.app**
 - Framework: Next.js 15.2.4 (App Router)
 - Deployed: 2026-04-13 (commit 04752c0)
+
+---
+
+## Repo Export Findings (documented 2026-04-13)
+
+- Current working repo path: `/home/worker/repo`
+- Current branch: `main`
+- Existing git remote: `origin -> git@github.com:nanocorp-hq/capia.git`
+- Local/untracked directories present during export task: `.agents/`, `.claude/`
+- ShiftMap codebase confirmed in this repo:
+  - `package.json` name: `shiftmap`
+  - Static landing page: `/index.html`
+  - Next.js app: `/app/layout.tsx`, `/app/page.tsx`, `/app/globals.css`
+  - Supporting docs: `/README.md`, `/docs/shiftmap-landing-copy-fr-v1.md`
+- Existing commit history before export:
+  - `f56db16` Update DOCS.md with Vercel deployment details
+  - `04752c0` Deploy ShiftMap landing page as Next.js app on Vercel
+  - `a8c1e8b` Update DOCS.md with landing page details
+  - `a12798c` Add ShiftMap French landing page with correct pricing
+  - `931b0e6` Add Stripe product IDs and payment links for ShiftMap
+  - `a3c6e08` Add ShiftMap onboarding questionnaire MVP
+  - `850fca8` Add ShiftMap French landing page copy v1
+  - `3fb6754` Define ShiftMap MVP commercial offer
+  - `8fb2b7f` Initial commit
+- External GitHub export target created via GitHub API:
+  - Repo: `vincepanik/shiftmap`
+  - URL: `https://github.com/vincepanik/shiftmap`
+  - Created at: `2026-04-13T19:58:05Z`
+  - Export strategy: keep existing `origin` pointed at `nanocorp-hq/capia`; add a second remote for the GitHub export
