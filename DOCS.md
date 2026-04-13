@@ -115,10 +115,10 @@ Single-file static landing page at `/index.html`. No external frameworks; Google
 - Local-only artifacts excluded from export via `.gitignore`: `.agents/`, `.claude/`
 - Branches pushed to GitHub export repo: `main`
 - Tags pushed: none
-- Total commits pushed on `main`: `11`
 - Commits added during export task:
   - `386175e` `feat: initial ShiftMap landing page — French, Stripe-connected`
   - `d2bffde` `docs: record ShiftMap GitHub export`
+  - `d49c3de` `docs: correct ShiftMap export summary`
 - Key files pushed:
   - `/index.html`
   - `/package.json`
