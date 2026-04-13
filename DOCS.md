@@ -65,6 +65,17 @@ Single-file static landing page at `/index.html`. No external frameworks; Google
 
 ## Repository Structure
 
-- Static `index.html` at repo root (no Next.js yet)
+- Static `index.html` at repo root (original source, preserved)
+- Next.js App Router at `app/` directory:
+  - `app/layout.tsx` — metadata (SEO, OG tags), Google Fonts
+  - `app/globals.css` — all landing page CSS
+  - `app/page.tsx` — ShiftMap HTML converted to JSX with useEffect for JS
 - Git repo: nanocorp-hq/capia, main branch
-- Vercel deployment target: https://capia.nanocorp.app (Next.js auto-detect pending setup)
+- Vercel deployment: **https://capia.nanocorp.app** (LIVE as of 2026-04-13)
+
+## Deployment
+
+- Platform: Vercel (auto-deploy on push to main)
+- Live URL: **https://capia.nanocorp.app**
+- Framework: Next.js 15.2.4 (App Router)
+- Deployed: 2026-04-13 (commit 04752c0)
