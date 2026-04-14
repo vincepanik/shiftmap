@@ -1,5 +1,25 @@
 # ShiftMap / CapIA — Project Documentation
 
+## Stripe CTA Link Update (2026-04-14)
+
+### Task outcome
+
+- Stripe API credentials were not available in the environment, so the task used the provided fallback Stripe URLs.
+- `app/page.tsx` already mapped each product CTA to the correct dedicated Stripe link.
+- The required code change was to add `target="_blank"` and `rel="noopener noreferrer"` to every external payment CTA in `app/page.tsx`.
+- Verified product-to-link mapping in `app/page.tsx`:
+  - Starter Report CTAs:
+    - Nav CTA
+    - Hero primary CTA
+    - Starter pricing CTA
+    - Final CTA
+    - URL: `https://buy.stripe.com/eVq00k3HeaH536qcsXeOB35`
+  - Pro Report pricing CTA:
+    - URL: `https://buy.stripe.com/eVq7sM3He8yX6iC8cHeOB36`
+  - AI Advisor pricing CTA:
+    - URL: `https://buy.stripe.com/6oUdRa6Tq9D14au50veOB37`
+- Confirmed no Pro or AI Advisor CTA shares a URL with another product. Starter uses one dedicated URL across all Starter-specific CTAs.
+
 ## Stripe CTA Verification (2026-04-14)
 
 ### Task outcome
