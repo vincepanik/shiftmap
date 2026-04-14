@@ -1,5 +1,33 @@
 # ShiftMap / CapIA — Project Documentation
 
+## Stripe Payment Link Verification (2026-04-14)
+
+### Request checked
+
+- Verify the 3 Stripe payment URLs currently used in `app/page.tsx`.
+- Replace only links that return an inactive/error response.
+
+### Findings
+
+- `app/page.tsx` already references the expected three URLs:
+  - Starter Report → `https://buy.stripe.com/eVq00k3HeaH536qcsXeOB35`
+  - Pro Report → `https://buy.stripe.com/eVq7sM3He8yX6iC8cHeOB36`
+  - AI Advisor → `https://buy.stripe.com/6oUdRa6Tq9D14au50veOB37`
+- HTTP GET verification on 2026-04-14:
+  - Starter Report URL returned `200`
+  - Pro Report URL returned `200`
+  - AI Advisor URL returned `200`
+- Browser verification after installing local Chrome via `agent-browser install` reached a live `Stripe Checkout` payment form for all three URLs.
+- None of the three URLs showed a Stripe inactive-link error or a `404`.
+- No replacement Stripe payment links were needed or created.
+- No `.env` file or Stripe secret key was present in the GitHub export checkout, so Stripe API link creation was not required.
+
+### Action taken
+
+- Left `app/page.tsx` unchanged because all existing payment links are live.
+- Ran `npm install` successfully.
+- Ran `npm run build` successfully with 0 errors.
+
 ## Stripe CTA Link Update (2026-04-14)
 
 ### Task outcome
