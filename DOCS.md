@@ -1,5 +1,27 @@
 # ShiftMap / CapIA — Project Documentation
 
+## Stripe CTA Verification (2026-04-14)
+
+### Task outcome
+
+- Verified that `app/page.tsx` and `index.html` already use the exact required Stripe payment links for all three offer CTAs:
+  - Starter Report → `https://buy.stripe.com/eVq00k3HeaH536qcsXeOB35`
+  - Pro Report → `https://buy.stripe.com/eVq7sM3He8yX6iC8cHeOB36`
+  - AI Advisor → `https://buy.stripe.com/6oUdRa6Tq9D14au50veOB37`
+- No source-code change was required in those two files because the checked-in URLs already matched the requested values exactly.
+- Ran `npm install` and `npm run build` in the GitHub export repo checkout; build passed successfully on 2026-04-14.
+
+### CTA locations verified
+
+- `app/page.tsx`
+  - Starter CTA links: lines 45, 80, 254, 508
+  - Pro CTA link: line 296
+  - AI Advisor CTA link: line 338
+- `index.html`
+  - Starter CTA links: lines 1233, 1264, 1438, 1692
+  - Pro CTA link: line 1480
+  - AI Advisor CTA link: line 1522
+
 ## Stripe Products & Pricing (configured 2026-04-13)
 
 All products are live in NanoCorp's Stripe account with EUR currency.
