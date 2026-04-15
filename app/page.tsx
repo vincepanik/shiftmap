@@ -523,13 +523,13 @@ export default function Home() {
               <div className="footer-brand">Shift<span>Map</span></div>
               <p className="footer-desc">Votre feuille de route IA sur mesure — en 24 heures. Pour les PME françaises qui veulent avancer sans perdre de temps.</p>
             </div>
-            <nav className="footer-links" aria-label="Footer navigation">
+            <div className="footer-links">
               <a href="#solution">Comment ça marche</a>
               <a href="#tarifs">Tarifs</a>
               <a href="#faq">FAQ</a>
               <a href="#">Mentions légales</a>
               <a href="#">Politique de confidentialité</a>
-            </nav>
+            </div>
           </div>
           <div className="footer-bottom">
             <p className="footer-copy">© 2026 ShiftMap. Tous droits réservés.</p>

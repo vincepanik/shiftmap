@@ -1,5 +1,31 @@
 # ShiftMap / CapIA — Project Documentation
 
+## Secondary Nav Removal (2026-04-15)
+
+### Request checked
+
+- Remove the stray secondary navigation bar showing:
+  - `Comment ça marche`
+  - `Tarifs`
+  - `FAQ`
+  - `Mentions légales`
+  - `Politique de confidentialité`
+- Leave the primary navigation, CTA buttons, Stripe URLs, and footer links themselves unchanged.
+
+### Findings
+
+- Current checkout does **not** contain a root `/index.html`, so there was no second file to update for this task.
+- In `/app/page.tsx`, the duplicate link group was the footer link container at approximately lines 526-532.
+- The visible top-left "secondary nav" came from that footer link group being marked up as a `<nav>`, while `/app/globals.css` applies fixed top positioning to every `nav` element globally.
+
+### Action taken
+
+- Replaced the footer container in `/app/page.tsx` from `<nav className="footer-links" aria-label="Footer navigation">` to `<div className="footer-links">`.
+- Kept all footer links intact and in the same order.
+- This removes the secondary nav element from the page structure while preserving the footer content and styling hooks.
+- Ran `npm install`.
+- Ran `npm run build` successfully with 0 errors on 2026-04-15.
+
 ## Stripe Payment Link Verification (2026-04-14)
 
 ### Request checked
