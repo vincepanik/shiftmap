@@ -42,7 +42,7 @@ export default function Home() {
             <li><a href="#solution">Comment ça marche</a></li>
             <li><a href="#tarifs">Tarifs</a></li>
             <li><a href="#faq">FAQ</a></li>
-            <li><a href="https://buy.stripe.com/eVq00k3HeaH536qcsXeOB35" className="nav-cta" target="_blank" rel="noopener noreferrer">Démarrer maintenant</a></li>
+            <li><a href="https://buy.stripe.com/00w00lccefQi0Ce6rl5wI00" className="nav-cta" target="_blank" rel="noopener noreferrer">Démarrer maintenant</a></li>
           </ul>
           <button
             className="nav-mobile-btn"
@@ -77,7 +77,7 @@ export default function Home() {
             </p>
 
             <div className="hero-actions">
-              <a href="https://buy.stripe.com/eVq00k3HeaH536qcsXeOB35" className="btn btn-primary" target="_blank" rel="noopener noreferrer">
+              <a href="https://buy.stripe.com/00w00lccefQi0Ce6rl5wI00" className="btn btn-primary" target="_blank" rel="noopener noreferrer">
                 Démarrer maintenant
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
               </a>
@@ -251,7 +251,7 @@ export default function Home() {
                 </li>
               </ul>
 
-              <a href="https://buy.stripe.com/eVq00k3HeaH536qcsXeOB35" className="pricing-cta" target="_blank" rel="noopener noreferrer">
+              <a href="https://buy.stripe.com/00w00lccefQi0Ce6rl5wI00" className="pricing-cta" target="_blank" rel="noopener noreferrer">
                 Commencer avec Starter →
               </a>
             </div>
@@ -293,7 +293,7 @@ export default function Home() {
                 </li>
               </ul>
 
-              <a href="https://buy.stripe.com/eVq7sM3He8yX6iC8cHeOB36" className="pricing-cta" target="_blank" rel="noopener noreferrer">
+              <a href="https://buy.stripe.com/14AdRba467jM5Wy8zt5wI01" className="pricing-cta" target="_blank" rel="noopener noreferrer">
                 Commencer avec Pro →
               </a>
             </div>
@@ -335,7 +335,7 @@ export default function Home() {
                 </li>
               </ul>
 
-              <a href="https://buy.stripe.com/6oUdRa6Tq9D14au50veOB37" className="pricing-cta" target="_blank" rel="noopener noreferrer">
+              <a href="https://buy.stripe.com/cNi00ldgibA2dp08zt5wI04" className="pricing-cta" target="_blank" rel="noopener noreferrer">
                 Souscrire à AI Advisor →
               </a>
             </div>
@@ -505,7 +505,7 @@ export default function Home() {
               Une feuille de route sur mesure, priorisée, et adaptée à votre entreprise. Sans jargon, sans chantier inutile.
             </p>
             <div className="cta-final-actions">
-              <a href="https://buy.stripe.com/eVq00k3HeaH536qcsXeOB35" className="btn btn-primary" style={{fontSize:'16px',padding:'16px 32px'}} target="_blank" rel="noopener noreferrer">
+              <a href="https://buy.stripe.com/00w00lccefQi0Ce6rl5wI00" className="btn btn-primary" style={{fontSize:'16px',padding:'16px 32px'}} target="_blank" rel="noopener noreferrer">
                 Démarrer maintenant — 97 €
               </a>
               <a href="#tarifs" className="btn btn-secondary">Comparer les offres</a>
@@ -532,7 +532,7 @@ export default function Home() {
             </nav>
           </div>
           <div className="footer-bottom">
-            <p className="footer-copy">© 2025 ShiftMap. Tous droits réservés.</p>
+            <p className="footer-copy">© 2026 ShiftMap. Tous droits réservés.</p>
             <div className="footer-contact">
               <a href="mailto:contact@shiftmap.fr">contact@shiftmap.fr</a>
             </div>
