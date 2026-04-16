@@ -1,5 +1,49 @@
 # ShiftMap / CapIA — Project Documentation
 
+## Blog Delivery Transfer to `vincepanik/shiftmap` (2026-04-16)
+
+### Request checked
+
+- Publish the first ShiftMap blog section and article to the GitHub export repo `vincepanik/shiftmap`.
+- Ensure the landing page main navigation exposes a `Blog` link.
+- Run `npm install` and `npm run build` with 0 errors before pushing.
+
+### Findings
+
+- Source content already existed in the internal repo under:
+  - `/app/blog/page.tsx`
+  - `/app/blog/articles.ts`
+  - `/app/blog/5-cas-usage-ia-pme/page.tsx`
+  - `/components/SiteHeader.tsx`
+  - `/components/SiteFooter.tsx`
+- The GitHub export checkout initially had:
+  - no `/app/blog` directory
+  - no `/components` directory
+  - no blog-specific CSS in `/app/globals.css`
+  - no `Blog` link in `/app/page.tsx`
+- The export repo still has the global CSS rule that styles every `<nav>` as a fixed top navigation, so footer link groups must stay as `<div className="footer-links">` instead of `<nav>` to avoid recreating the old duplicate-nav bug.
+
+### Action taken
+
+- Added `/app/blog/page.tsx` with a one-card blog index linking to `/blog/5-cas-usage-ia-pme`.
+- Added `/app/blog/articles.ts` to hold blog metadata for the first article.
+- Added `/app/blog/5-cas-usage-ia-pme/page.tsx` with the French SEO article:
+  - H1 on `IA pour PME`
+  - 5 H2 sections
+  - problem → solution → benefit → example structure in each section
+  - CTA to `https://shiftmap.fr/#tarifs`
+  - French metadata title, description, and Open Graph title
+- Added shared blog-only UI helpers:
+  - `/components/SiteHeader.tsx`
+  - `/components/SiteFooter.tsx`
+- Updated `/app/page.tsx` top navigation and footer links to include `Blog`.
+- Updated `/app/globals.css` with `nav-solid` and the blog route styling.
+- Ran `npm install`.
+- Ran `npm run build` successfully with 0 errors on 2026-04-16.
+- Build output confirmed static routes for:
+  - `/blog`
+  - `/blog/5-cas-usage-ia-pme`
+
 ## Secondary Nav Removal (2026-04-15)
 
 ### Request checked

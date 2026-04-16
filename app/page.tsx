@@ -42,6 +42,7 @@ export default function Home() {
             <li><a href="#solution">Comment ça marche</a></li>
             <li><a href="#tarifs">Tarifs</a></li>
             <li><a href="#faq">FAQ</a></li>
+            <li><a href="/blog">Blog</a></li>
             <li><a href="https://buy.stripe.com/00w00lccefQi0Ce6rl5wI00" className="nav-cta" target="_blank" rel="noopener noreferrer">Démarrer maintenant</a></li>
           </ul>
           <button
@@ -527,6 +528,7 @@ export default function Home() {
               <a href="#solution">Comment ça marche</a>
               <a href="#tarifs">Tarifs</a>
               <a href="#faq">FAQ</a>
+              <a href="/blog">Blog</a>
               <a href="#">Mentions légales</a>
               <a href="#">Politique de confidentialité</a>
             </div>
