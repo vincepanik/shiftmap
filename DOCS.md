@@ -43,6 +43,8 @@
 - Local UI verification completed with `agent-browser` against:
   - `/blog` → confirms two article cards are visible
   - `/blog/choisir-outil-ia-pme` → confirms the new H1, all H2 sections, and the CTA link are rendered
+- Committed changes as `feat: add blog article — choisir outil IA PME 2025` (`62e6163`) and pushed to `origin/main`.
+- One production verification attempt against `https://shiftmap.fr/blog/choisir-outil-ia-pme` returned `net::ERR_CONNECTION_RESET`, so live publication status on the custom domain remains to be checked separately.
 
 
 ## Blog Delivery Transfer to `vincepanik/shiftmap` (2026-04-16)
