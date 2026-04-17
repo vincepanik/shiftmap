@@ -1,5 +1,50 @@
 # ShiftMap / CapIA — Project Documentation
 
+## Second SEO Blog Article: `choisir-outil-ia-pme` (2026-04-17)
+
+### Request checked
+
+- Publish a second French SEO article on `vincepanik/shiftmap`.
+- Topic: `Comment choisir son premier outil IA en PME : le guide pratique 2025`
+- Target keywords:
+  - `outil IA PME`
+  - `choisir outil intelligence artificielle entreprise`
+- Required changes:
+  - add `app/blog/choisir-outil-ia-pme/page.tsx`
+  - expose the article as the second card on `/blog`
+  - include French SEO metadata
+  - run `npm install` and `npm run build`
+
+### Findings
+
+- The exported ShiftMap repo already has a blog structure in place with:
+  - `/app/blog/page.tsx`
+  - `/app/blog/articles.ts`
+  - `/app/blog/5-cas-usage-ia-pme/page.tsx`
+  - shared layout via `/components/SiteHeader.tsx` and `/components/SiteFooter.tsx`
+- The blog index renders cards from the `blogArticles` array, so adding a second card primarily required extending `/app/blog/articles.ts`.
+- Existing blog styling in `/app/globals.css` was already sufficient for a second long-form article page without introducing new CSS.
+
+### Action taken
+
+- Added `/app/blog/choisir-outil-ia-pme/page.tsx` with an 878-word French article structured as:
+  - H1
+  - intro on the challenge of choosing among many AI tools
+  - 5 H2 sections
+  - closing CTA to `https://shiftmap.fr/#tarifs`
+- Updated `/app/blog/articles.ts` with the new article metadata:
+  - slug: `choisir-outil-ia-pme`
+  - published label: `17 avril 2026`
+  - reading time: `7 min`
+  - word count: `878`
+- Updated `/app/blog/page.tsx` metadata and hero copy so the blog index now better covers both use cases and tool-selection topics.
+- Ran `npm install` successfully on 2026-04-17.
+- Ran `npm run build` successfully on 2026-04-17.
+- Local UI verification completed with `agent-browser` against:
+  - `/blog` → confirms two article cards are visible
+  - `/blog/choisir-outil-ia-pme` → confirms the new H1, all H2 sections, and the CTA link are rendered
+
+
 ## Blog Delivery Transfer to `vincepanik/shiftmap` (2026-04-16)
 
 ### Request checked
