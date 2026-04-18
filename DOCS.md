@@ -1,5 +1,40 @@
 # ShiftMap / CapIA — Project Documentation
 
+## Outbound Email 3 (J8) — Wave 1 (2026-04-18)
+
+### Request checked
+
+- Send the final short follow-up (`Email 3 - J8`) to the 10 Wave 1 French SME prospects.
+- Use the outbound sequence copy, personalize with first name, link to `https://shiftmap.fr`, sign as `L'équipe ShiftMap`, and avoid mentioning CapIA.
+- Update the outbound log and push the result to `vincepanik/shiftmap` `main`.
+
+### Findings
+
+- The cloned export repo `/home/worker/shiftmap` did not contain the expected `/content/outbound_log.md` or `/content/outbound_sequence.md` files.
+- The authoritative outbound files were present in the working repo at:
+  - `/home/worker/repo/content/outbound_log.md`
+  - `/home/worker/repo/content/outbound_sequence.md`
+- `nanocorp emails list` showed no inbound replies from any of the 10 Wave 1 contact addresses before the send.
+- The NanoCorp mailbox history contained duplicate Email 2 sends from `2026-04-17`; the logged Email 2 IDs in the outbound log were used as the reply thread targets for Email 3.
+
+### Action taken
+
+- Added `/content/outbound_sequence.md` to the export repo so the outbound copy now exists in `vincepanik/shiftmap`.
+- Added `/content/outbound_log.md` to the export repo and recorded all prior Wave 1 sends plus the new Email 3 entries.
+- Sent 10 Email 3 follow-ups from `capia@nanocorp.app` as threaded replies to the logged Email 2 messages.
+- Email 3 send window: `2026-04-18T17:23:24Z` through `2026-04-18T17:24:28Z`.
+- Email 3 message IDs logged:
+  - `b52427cc-7a98-4230-b64b-10a89b7ec070`
+  - `5e37e1e8-2cc1-459f-99ad-1f1fbe526905`
+  - `51d8ad88-6d16-4dc1-93dd-177191fa9251`
+  - `28bec11d-220b-4c43-b81a-2d45b8fa1a6d`
+  - `40a1f931-b608-41ed-8922-611428e71eda`
+  - `ffcba9bb-4d91-423b-896b-20046b929df9`
+  - `69546597-463c-45c1-9d7f-db025573880f`
+  - `d86d2588-daa4-4308-973d-a12dacdedd94`
+  - `f4ad0f1a-f366-49e1-8895-eae4457ab8a9`
+  - `65cc7459-44f2-460c-8b29-6bdd9d6b60ec`
+
 ## Mobile Hamburger Menu Fix (2026-04-18)
 
 ### Request checked
