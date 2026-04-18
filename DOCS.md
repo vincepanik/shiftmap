@@ -1,5 +1,31 @@
 # ShiftMap / CapIA — Project Documentation
 
+## Mobile Hamburger Menu Fix (2026-04-18)
+
+### Request checked
+
+- Fix the broken mobile hamburger menu interaction for the ShiftMap landing page.
+- Ensure the menu button opens and closes the mobile nav instead of only changing the button itself.
+- Keep Stripe URLs, footer content, and French landing-page copy unchanged.
+
+### Findings
+
+- The broken handler was not in `/app/page.tsx` directly; the page imports `/components/SiteHeader.tsx`, which owns the navigation markup.
+- The existing mobile button handler only ran `classList.toggle("open")` on the button element itself.
+- On mobile, `/app/globals.css` sets `.nav-links { display: none; }` under `@media (max-width: 900px)`, but no shared React state or CSS class ever switched the menu back to visible.
+- Result: tapping the hamburger animated nothing meaningful for the menu and left the mobile nav hidden at all times.
+
+### Action taken
+
+- Updated `/components/SiteHeader.tsx` to use `useState` with a single `isMobileMenuOpen` flag.
+- Wired the hamburger `onClick` to `setIsMobileMenuOpen((open) => !open)`.
+- Bound both the button class and the nav links class to the same state:
+  - button gets `.open`
+  - menu gets `.nav-links-open`
+- Added `type="button"`, `aria-expanded`, and `aria-controls` on the mobile menu button.
+- Added link-level close handlers so choosing a mobile nav item closes the menu.
+- Updated `/app/globals.css` so the mobile breakpoint shows the menu when `.nav-links-open` is present and animates the hamburger icon into a close state.
+
 ## Second SEO Blog Article: `choisir-outil-ia-pme` (2026-04-17)
 
 ### Request checked
