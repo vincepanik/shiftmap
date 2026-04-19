@@ -1,5 +1,33 @@
 # ShiftMap / CapIA — Project Documentation
 
+## LinkedIn Footer + Outreach Update (2026-04-19)
+
+### Request checked
+
+- Add the live ShiftMap LinkedIn company page to the footer in `app/page.tsx`.
+- Keep existing Stripe URLs untouched.
+- Keep the footer legal links `Mentions légales` and `Politique de confidentialité` intact.
+- Update any outreach-related documents to reference `https://www.linkedin.com/company/shiftmap/`.
+
+### Findings
+
+- The current GitHub export repo `vincepanik/shiftmap` already exposes the footer links in `/app/page.tsx` as a plain `<div className="footer-links">`, which avoids the old fixed-nav CSS bug tied to generic `<nav>` styling.
+- The footer link group already contained `Comment ça marche`, `Tarifs`, `FAQ`, `Blog`, `Mentions légales`, and `Politique de confidentialité`; the legal links could be preserved exactly while inserting a new `LinkedIn` link beside the existing footer links.
+- `nanocorp docs list` returned an empty document set for the company on `2026-04-19`, so there were no NanoCorp-stored outreach templates to update through the CLI.
+- The reusable outreach copy present in the repo is `/content/outbound_sequence.md`, which contains the three outbound email templates used for prospecting.
+
+### Action taken
+
+- Added a footer `LinkedIn` link in `/app/page.tsx` pointing to `https://www.linkedin.com/company/shiftmap/` with the same anchor styling as the surrounding footer links and `target="_blank" rel="noopener noreferrer"`.
+- Left both footer legal links unchanged and in place.
+- Left all existing Stripe payment URLs unchanged.
+- Updated `/content/outbound_sequence.md` so each outbound email now ends with a simple signature block containing:
+  - `L'équipe ShiftMap`
+  - the landing page URL variable
+  - the live LinkedIn company page URL
+- Ran `npm install` successfully on `2026-04-19`.
+- Ran `npm run build` successfully on `2026-04-19` with 0 errors.
+
 ## Outbound Email 3 (J8) — Wave 1 (2026-04-18)
 
 ### Request checked

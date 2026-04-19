@@ -529,6 +529,7 @@ export default function Home() {
               <a href="#tarifs">Tarifs</a>
               <a href="#faq">FAQ</a>
               <a href="/blog">Blog</a>
+              <a href="https://www.linkedin.com/company/shiftmap/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
               <a href="#">Mentions légales</a>
               <a href="#">Politique de confidentialité</a>
             </div>

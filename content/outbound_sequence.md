@@ -35,6 +35,10 @@ Vous pouvez aussi voir le principe ici : {{landing_page_url}}
 
 Bien à vous,
 
+L'équipe ShiftMap  
+Site : {{landing_page_url}}  
+LinkedIn : https://www.linkedin.com/company/shiftmap/
+
 ## Email 2 - J4
 
 **Sujet**  
@@ -57,6 +61,10 @@ Sinon, voici le détail : {{landing_page_url}}
 
 Bien à vous,
 
+L'équipe ShiftMap  
+Site : {{landing_page_url}}  
+LinkedIn : https://www.linkedin.com/company/shiftmap/
+
 ## Email 3 - J8
 
 **Sujet**  
@@ -76,6 +84,10 @@ Si vous voulez voir si cela vaut un échange, répondez simplement à ce mail av
 Sinon, tout est résumé ici : {{landing_page_url}}
 
 Bien à vous,
+
+L'équipe ShiftMap  
+Site : {{landing_page_url}}  
+LinkedIn : https://www.linkedin.com/company/shiftmap/
 
 ## Notes de personnalisation
 
