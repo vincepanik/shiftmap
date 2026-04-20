@@ -1,8 +1,11 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Home() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const handleMobileMenuClose = () => setIsMobileMenuOpen(false);
+
   useEffect(() => {
     // Nav scroll effect
     const nav = document.getElementById('main-nav');
@@ -45,10 +48,24 @@ export default function Home() {
             <li><a href="/blog">Blog</a></li>
             <li><a href="https://buy.stripe.com/00w00lccefQi0Ce6rl5wI00" className="nav-cta" target="_blank" rel="noopener noreferrer">Démarrer maintenant</a></li>
           </ul>
+          <ul
+            id="nav-mobile-menu"
+            className="nav-links"
+            style={{ display: isMobileMenuOpen ? 'flex' : 'none' }}
+          >
+            <li><a href="#probleme" onClick={handleMobileMenuClose}>Problème</a></li>
+            <li><a href="#solution" onClick={handleMobileMenuClose}>Comment ça marche</a></li>
+            <li><a href="#tarifs" onClick={handleMobileMenuClose}>Tarifs</a></li>
+            <li><a href="#faq" onClick={handleMobileMenuClose}>FAQ</a></li>
+            <li><a href="https://buy.stripe.com/eVq00k3HeaH536qcsXeOB35" className="nav-cta" target="_blank" rel="noopener noreferrer" onClick={handleMobileMenuClose}>Démarrer maintenant</a></li>
+          </ul>
           <button
-            className="nav-mobile-btn"
+            type="button"
+            className={`nav-mobile-btn${isMobileMenuOpen ? ' open' : ''}`}
             aria-label="Menu"
-            onClick={(e) => (e.currentTarget as HTMLButtonElement).classList.toggle('open')}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="nav-mobile-menu"
+            onClick={() => setIsMobileMenuOpen((open) => !open)}
           >
             <span></span><span></span><span></span>
           </button>
@@ -65,16 +82,15 @@ export default function Home() {
             </div>
 
             <h1 className="hero-title">
-              Votre feuille de route IA<br />
-              <em>sur mesure —</em> en <span className="accent">24 heures.</span>
+              Vous ne savez pas par où commencer avec l&apos;IA ?<br />
+              <em>On vous dit quoi faire — en 24 heures.</em><span className="accent"></span>
             </h1>
 
-            <p className="hero-tagline">Identifiez les bons cas d&apos;usage. Passez à l&apos;action.</p>
+            <p className="hero-tagline">Questionnaire en ligne. Rapport PDF livré en 24h. À partir de 97€.</p>
 
             <p className="hero-sub">
-              ShiftMap analyse votre contexte et vous remet une feuille de route IA claire,
-              priorisée et actionnable. Vous savez où commencer, quoi lancer en premier,
-              et ce qu&apos;il faut laisser de côté.
+              ShiftMap analyse votre entreprise et vous remet un plan d&apos;action concret :
+              quels outils adopter, dans quel ordre, et comment démarrer dès la semaine prochaine.
             </p>
 
             <div className="hero-actions">

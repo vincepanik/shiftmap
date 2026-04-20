@@ -1,5 +1,36 @@
 # ShiftMap / CapIA — Project Documentation
 
+## Hero Copy + Mobile Menu Links (2026-04-20)
+
+### Request checked
+
+- Update the hero copy in `/app/page.tsx` without touching the existing CTA buttons or the stats row.
+- Populate the mobile hamburger menu with the requested 5 links and ensure each tap closes the menu.
+- Use the real in-page anchors already present in the file.
+
+### Findings
+
+- The page sections in `/app/page.tsx` use these existing IDs:
+  - `#probleme`
+  - `#solution`
+  - `#tarifs`
+  - `#faq`
+- The mobile button in `/app/page.tsx` previously only toggled its own `open` class and did not control a rendered mobile link panel.
+- The repo already had a working state-based mobile nav pattern in `/components/SiteHeader.tsx`, which confirmed the intended `nav-links` / `nav-mobile-btn` behavior.
+
+### Action taken
+
+- Updated the hero heading, tagline, and descriptive paragraph text in `/app/page.tsx` to the requested French copy.
+- Left the hero stats row unchanged.
+- Added local mobile-menu state in `/app/page.tsx`.
+- Added a dedicated mobile menu panel in `/app/page.tsx` with exactly 5 links:
+  - `Problème` → `#probleme`
+  - `Comment ça marche` → `#solution`
+  - `Tarifs` → `#tarifs`
+  - `FAQ` → `#faq`
+  - `Démarrer maintenant` → `https://buy.stripe.com/eVq00k3HeaH536qcsXeOB35`
+- Wired each mobile-menu link to close the menu on click.
+
 ## LinkedIn Footer + Outreach Update (2026-04-19)
 
 ### Request checked
