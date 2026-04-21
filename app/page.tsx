@@ -83,7 +83,7 @@ export default function Home() {
 
             <h1 className="hero-title">
               Vous ne savez pas par où commencer avec l&apos;IA ?<br />
-              <em>On vous dit quoi faire — en 24 heures.</em><span className="accent"></span>
+              <em>Recevez votre plan d&apos;action personnalisé.</em><span className="accent"></span>
             </h1>
 
             <p className="hero-tagline">Questionnaire en ligne. Rapport PDF livré en 24h. À partir de 97€.</p>

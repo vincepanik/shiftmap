@@ -1,5 +1,27 @@
 # ShiftMap / CapIA — Project Documentation
 
+## Hero Title Line 2 Update (2026-04-21)
+
+### Request checked
+
+- Update only line 2 of the hero title in `/app/page.tsx`.
+- Keep line 1 exactly as `Vous ne savez pas par où commencer avec l'IA ?`.
+- Preserve the existing italic hero-line element and do not change navigation, footer, Stripe URLs, or other styling.
+
+### Findings
+
+- The target repo is `/home/worker/shiftmap-target-20260421`, cloned from `vincepanik/shiftmap` on branch `main`.
+- The current hero title in `/app/page.tsx` uses:
+  - line 1: `Vous ne savez pas par où commencer avec l&apos;IA ?`
+  - line 2 inside the existing `<em>` element: `On vous dit quoi faire — en 24 heures.`
+- The repo currently pins `next` to `15.5.15` in `/package.json`; this task does not change framework versioning.
+
+### Action taken
+
+- Replaced only the line 2 hero text in `/app/page.tsx` with `Recevez votre plan d&apos;action personnalisé.` inside the same `<em>` element.
+- Left all existing Stripe payment URLs unchanged.
+- Left all other hero copy, navigation, footer content, and styling unchanged.
+
 ## Hero Copy + Mobile Menu Links (2026-04-20)
 
 ### Request checked
