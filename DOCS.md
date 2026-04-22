@@ -1,5 +1,60 @@
 # ShiftMap / CapIA — Project Documentation
 
+## Outbound Wave 2 Email 3 (J8) (2026-04-22)
+
+### Request checked
+
+- Send the final short follow-up (`Email 3 - J8`) to the 10 Wave 2 prospects.
+- Personalize with first name, keep the body under 100 words, link to `https://shiftmap.fr`, sign as `L'équipe ShiftMap`, and do not mention CapIA.
+- Update the outbound log in the export repo and push the result to `vincepanik/shiftmap` `main`.
+
+### Findings
+
+- The cloned export repo at `/home/worker/shiftmap` already had:
+  - `/content/outbound_sequence.md` with the Email 3 (`J8`) copy
+  - `/content/outbound_log.md` with Wave 1 history only
+- The authoritative Wave 2 recipient list and Wave 2 / Email 2 thread IDs were present in the working repo at:
+  - `/home/worker/repo/content/outbound_log.md`
+- Wave 2 consists of exactly these 10 prospects:
+  - Cyril Ledig — Dropteam — `cyril.ledig@dropteam.fr`
+  - Christophe de Valroger — WYZ Group — `contact@wyzgroup.com`
+  - Jerome Pechot — YourBO — `jerome.pechot@yourbo.fr`
+  - Olivier Raes — Mipise — `olivier.raes@mipisepaymentservices.com`
+  - Nicolas Helin — Option Way — `nicolas@optionway.com`
+  - Frederic Doucene — Fitle — `frederic.doucene@fitle.com`
+  - Stephane Dothee — Odonatech — `contact@odonatech.com`
+  - Baptiste Collot — Trustpair — `contact@trustpair.com`
+  - Frederic Bourzeix — Global SP — `commerce@globalsp.com`
+  - Jerome Vergez — Digicall — `contact@digicall.fr`
+- `nanocorp emails send --help` confirmed support for `--reply-to`, which was required to thread Email 3 to the logged Email 2 messages.
+
+### Action taken
+
+- Sent 10 Email 3 follow-ups from `capia@nanocorp.app` on `2026-04-22` as threaded replies to the logged Wave 2 / Email 2 messages.
+- Used the subject pattern `{{prenom}}, je clôture le sujet ?` with first-name personalization for all 10 sends.
+- Used a shortened French body under 100 words with:
+  - `https://shiftmap.fr`
+  - signature `L'équipe ShiftMap`
+  - no mention of CapIA
+- The local post-send parsing step failed after delivery because of an incorrect `jq split` expression; recovery was done safely from `nanocorp emails list --direction outbound --limit 30`, without re-sending.
+- Synced `/content/outbound_log.md` in the export repo so it now contains:
+  - Wave 2 / Email 1 history
+  - Wave 2 / Email 2 history
+  - Wave 2 / Email 3 entries with the final 10 message IDs
+
+### Email 3 message IDs
+
+- Cyril Ledig — `781b8e31-cb4e-48b8-8573-ce5ad845455d`
+- Christophe de Valroger — `db0b1ea3-02d6-4fe5-9690-68aceb7f4adf`
+- Jerome Pechot — `62b64756-387f-45fc-831c-18cab76cd79c`
+- Olivier Raes — `c1d46d33-9f3d-4cb5-9e8e-59f77f7cb4a9`
+- Nicolas Helin — `85b31b94-294e-4f19-b892-0d10209643a9`
+- Frederic Doucene — `8f3ceadb-19d0-4fbb-b7be-e09a44f3b3fc`
+- Stephane Dothee — `7be38916-18c6-4fb1-874b-77cd4344282e`
+- Baptiste Collot — `e9518e59-9825-4a44-baeb-ee956b17c494`
+- Frederic Bourzeix — `f49eec86-7e5f-4917-9411-24261d1e4b3e`
+- Jerome Vergez — `f0816ae1-cd23-42a2-b27f-b9796fad8dc0`
+
 ## Hero Title Line 2 Update (2026-04-21)
 
 ### Request checked

@@ -45,6 +45,51 @@
 | 2026-04-18 | Olivier Guyomard | LineUP7 | CEO | olivier.guyomard@lineup7.fr | Email 3 (J8) | thread reply | sent | ddbecd92-7d63-4781-b5f7-e73f4b64686d | f4ad0f1a-f366-49e1-8895-eae4457ab8a9 |
 | 2026-04-18 | Clement Banet | Coqpit | CEO | contact@coqpit.fr | Email 3 (J8) | thread reply | sent | e5fe4833-f35d-4a53-a820-33c6099cf71a | 65cc7459-44f2-460c-8b29-6bdd9d6b60ec |
 
+## Wave 2 — Email 1 (J1) — 2026-04-20
+
+| Date (UTC) | Prospect | Company | Role targeted | Email used | Email # | Send type | Status | Email ID |
+|---|---|---|---|---|---|---|---|---|
+| 2026-04-20 | Cyril Ledig | Dropteam | Directeur General / CEO | cyril.ledig@dropteam.fr | Wave 2 / Email 1 | direct verified | sent | 143d7ccc-216a-4746-853d-1da042174a0d |
+| 2026-04-20 | Christophe de Valroger | WYZ Group | CEO | contact@wyzgroup.com | Wave 2 / Email 1 | public company inbox | sent | 2644342d-4f9e-475d-b31a-5cc433088611 |
+| 2026-04-20 | Jerome Pechot | YourBO | COO | jerome.pechot@yourbo.fr | Wave 2 / Email 1 | direct verified | sent | 7b189d59-ea8a-4747-918e-7d12b230c83d |
+| 2026-04-20 | Olivier Raes | Mipise | CEO / Directeur General | olivier.raes@mipisepaymentservices.com | Wave 2 / Email 1 | direct verified | sent | 2c8b1970-5f91-47df-9160-05aa4ad4a895 |
+| 2026-04-20 | Nicolas Helin | Option Way | COO / Directeur General | nicolas@optionway.com | Wave 2 / Email 1 | direct verified | sent | f5f86f39-9893-4620-9dd7-e1d30c631859 |
+| 2026-04-20 | Frederic Doucene | Fitle | General Manager / COO | frederic.doucene@fitle.com | Wave 2 / Email 1 | direct verified | sent | 8d9a7832-84c9-4316-9bba-6d484ca61ee3 |
+| 2026-04-20 | Stephane Dothee | Odonatech | CEO | contact@odonatech.com | Wave 2 / Email 1 | public company inbox | sent | a5fbc5af-8f06-4a60-ad16-6183b295e017 |
+| 2026-04-20 | Baptiste Collot | Trustpair | CEO | contact@trustpair.com | Wave 2 / Email 1 | public company inbox | sent | eed32733-48e1-469b-8ee9-aa848865f963 |
+| 2026-04-20 | Frederic Bourzeix | Global SP | Directeur General / CEO | commerce@globalsp.com | Wave 2 / Email 1 | public company inbox | sent | 1d9acb53-5d7a-4abe-b31c-4da2df4e2e51 |
+| 2026-04-20 | Jerome Vergez | Digicall | CEO | contact@digicall.fr | Wave 2 / Email 1 | public company inbox | sent | d7e7d8f5-465b-4d7f-8a71-c2ae28d57364 |
+
+## Wave 2 — Email 2 (J4) — 2026-04-21
+
+| Date (UTC) | Prospect | Company | Role targeted | Email used | Email # | Send type | Status | Reply-to | Email ID |
+|---|---|---|---|---|---|---|---|---|---|
+| 2026-04-21 | Cyril Ledig | Dropteam | Directeur General / CEO | cyril.ledig@dropteam.fr | Wave 2 / Email 2 | thread reply | sent | 143d7ccc-216a-4746-853d-1da042174a0d | ae471118-7bec-4b67-bbb4-41d9c7a8e539 |
+| 2026-04-21 | Christophe de Valroger | WYZ Group | CEO | contact@wyzgroup.com | Wave 2 / Email 2 | thread reply | sent | 2644342d-4f9e-475d-b31a-5cc433088611 | 5d25ca84-3af4-4b52-889d-562296a891db |
+| 2026-04-21 | Jerome Pechot | YourBO | COO | jerome.pechot@yourbo.fr | Wave 2 / Email 2 | thread reply | sent | 7b189d59-ea8a-4747-918e-7d12b230c83d | 58a80783-5079-49b1-bb8d-c263d2e0254d |
+| 2026-04-21 | Olivier Raes | Mipise | CEO / Directeur General | olivier.raes@mipisepaymentservices.com | Wave 2 / Email 2 | thread reply | sent | 2c8b1970-5f91-47df-9160-05aa4ad4a895 | 3e9f7a13-574d-4d4e-a4b0-2e99a736780d |
+| 2026-04-21 | Nicolas Helin | Option Way | COO / Directeur General | nicolas@optionway.com | Wave 2 / Email 2 | thread reply | sent | f5f86f39-9893-4620-9dd7-e1d30c631859 | 100b0f3b-3fe3-4b79-9e83-8a4e7272981c |
+| 2026-04-21 | Frederic Doucene | Fitle | General Manager / COO | frederic.doucene@fitle.com | Wave 2 / Email 2 | thread reply | sent | 8d9a7832-84c9-4316-9bba-6d484ca61ee3 | 6263ae24-d9c0-4ca4-8568-41dc961a6eab |
+| 2026-04-21 | Stephane Dothee | Odonatech | CEO | contact@odonatech.com | Wave 2 / Email 2 | thread reply | sent | a5fbc5af-8f06-4a60-ad16-6183b295e017 | b42671be-0f36-4271-abf3-1b257f10525d |
+| 2026-04-21 | Baptiste Collot | Trustpair | CEO | contact@trustpair.com | Wave 2 / Email 2 | thread reply | sent | eed32733-48e1-469b-8ee9-aa848865f963 | 934e61bc-91c7-4633-8d88-60ee4a291597 |
+| 2026-04-21 | Frederic Bourzeix | Global SP | Directeur General / CEO | commerce@globalsp.com | Wave 2 / Email 2 | thread reply | sent | 1d9acb53-5d7a-4abe-b31c-4da2df4e2e51 | 613f0c29-ce9d-4d9d-a1ac-6ea853b87470 |
+| 2026-04-21 | Jerome Vergez | Digicall | CEO | contact@digicall.fr | Wave 2 / Email 2 | thread reply | sent | d7e7d8f5-465b-4d7f-8a71-c2ae28d57364 | 5270eab6-1631-4dda-b91f-8bf9e4dfe8fc |
+
+## Wave 2 — Email 3 (J8) — 2026-04-22
+
+| Date (UTC) | Prospect | Company | Role targeted | Email used | Email # | Send type | Status | Reply-to | Email ID |
+|---|---|---|---|---|---|---|---|---|---|
+| 2026-04-22 | Cyril Ledig | Dropteam | Directeur General / CEO | cyril.ledig@dropteam.fr | Wave 2 / Email 3 | thread reply | sent | ae471118-7bec-4b67-bbb4-41d9c7a8e539 | 781b8e31-cb4e-48b8-8573-ce5ad845455d |
+| 2026-04-22 | Christophe de Valroger | WYZ Group | CEO | contact@wyzgroup.com | Wave 2 / Email 3 | thread reply | sent | 5d25ca84-3af4-4b52-889d-562296a891db | db0b1ea3-02d6-4fe5-9690-68aceb7f4adf |
+| 2026-04-22 | Jerome Pechot | YourBO | COO | jerome.pechot@yourbo.fr | Wave 2 / Email 3 | thread reply | sent | 58a80783-5079-49b1-bb8d-c263d2e0254d | 62b64756-387f-45fc-831c-18cab76cd79c |
+| 2026-04-22 | Olivier Raes | Mipise | CEO / Directeur General | olivier.raes@mipisepaymentservices.com | Wave 2 / Email 3 | thread reply | sent | 3e9f7a13-574d-4d4e-a4b0-2e99a736780d | c1d46d33-9f3d-4cb5-9e8e-59f77f7cb4a9 |
+| 2026-04-22 | Nicolas Helin | Option Way | COO / Directeur General | nicolas@optionway.com | Wave 2 / Email 3 | thread reply | sent | 100b0f3b-3fe3-4b79-9e83-8a4e7272981c | 85b31b94-294e-4f19-b892-0d10209643a9 |
+| 2026-04-22 | Frederic Doucene | Fitle | General Manager / COO | frederic.doucene@fitle.com | Wave 2 / Email 3 | thread reply | sent | 6263ae24-d9c0-4ca4-8568-41dc961a6eab | 8f3ceadb-19d0-4fbb-b7be-e09a44f3b3fc |
+| 2026-04-22 | Stephane Dothee | Odonatech | CEO | contact@odonatech.com | Wave 2 / Email 3 | thread reply | sent | b42671be-0f36-4271-abf3-1b257f10525d | 7be38916-18c6-4fb1-874b-77cd4344282e |
+| 2026-04-22 | Baptiste Collot | Trustpair | CEO | contact@trustpair.com | Wave 2 / Email 3 | thread reply | sent | 934e61bc-91c7-4633-8d88-60ee4a291597 | e9518e59-9825-4a44-baeb-ee956b17c494 |
+| 2026-04-22 | Frederic Bourzeix | Global SP | Directeur General / CEO | commerce@globalsp.com | Wave 2 / Email 3 | thread reply | sent | 613f0c29-ce9d-4d9d-a1ac-6ea853b87470 | f49eec86-7e5f-4917-9411-24261d1e4b3e |
+| 2026-04-22 | Jerome Vergez | Digicall | CEO | contact@digicall.fr | Wave 2 / Email 3 | thread reply | sent | 5270eab6-1631-4dda-b91f-8bf9e4dfe8fc | f0816ae1-cd23-42a2-b27f-b9796fad8dc0 |
+
 ## Notes
 
 - Email 1 was personalized with first name, company name, and sector.
@@ -56,3 +101,9 @@
 - Email 3 (J8) was sent on `2026-04-18` as a threaded reply to Email 2 for all 10 Wave 1 prospects.
 - Email 3 used the subject `{{prenom}}, je clôture le sujet ?`, the `https://shiftmap.fr` link, and the signature `L'équipe ShiftMap`.
 - NanoCorp mailbox review before the send showed no inbound replies from the 10 Wave 1 contact addresses.
+- Wave 2 / Email 1 was sent on `2026-04-20` to 10 new French prospects distinct from Wave 1.
+- Wave 2 used first-name, company, and sector personalization, kept the body under 150 words, and linked to `https://shiftmap.fr`.
+- Wave 2 mixed `direct verified` emails and `public company inbox` addresses where NanoCorp verification was rate-limited or no direct address was available.
+- Wave 2 / Email 2 was sent on `2026-04-21` as a threaded reply to the corresponding `Wave 2 / Email 1` messages for the same 10 prospects.
+- Wave 2 / Email 3 was sent on `2026-04-22` as a threaded reply to the corresponding `Wave 2 / Email 2` messages for the same 10 prospects.
+- Wave 2 / Email 3 used the subject `{{prenom}}, je clôture le sujet ?`, stayed under 100 words, linked to `https://shiftmap.fr`, and used the signature `L'équipe ShiftMap`.
