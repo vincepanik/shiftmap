@@ -498,6 +498,21 @@ All products are live in NanoCorp's Stripe account with EUR currency.
   - `POST /api/onboarding` returned `{"success":true,"deliveryMethod":"log"}`
   - server console logged the full normalized submission payload as expected
 
+### Git / deployment outcome
+
+- Feature commit created with the requested message:
+  - `feat: add client onboarding questionnaire page`
+- Local worker history had diverged from `vincepanik/shiftmap`, so the feature commit was cherry-picked onto the fetched remote `main` before push.
+- Pushed successfully to `vincepanik/shiftmap` `main` on `2026-04-23`:
+  - previous remote head: `d3320de`
+  - new remote head: `ae240d0`
+- Production verification after the Vercel wait window:
+  - `https://www.shiftmap.fr/onboarding` loaded successfully in `agent-browser`
+  - the full questionnaire fields and submit button were present in production
+- Reminder:
+  - `https://shiftmap.fr` apex host was previously documented as misconfigured for TLS
+  - `https://www.shiftmap.fr` remains the reliable public URL for verification until that separate domain task is fixed
+
 ### Combined Payment Link (all active products)
 
 ```
