@@ -408,6 +408,96 @@ All products are live in NanoCorp's Stripe account with EUR currency.
 | Pro Report     | https://buy.stripe.com/eVq7sM3He8yX6iC8cHeOB36       |
 | AI Advisor     | https://buy.stripe.com/6oUdRa6Tq9D14au50veOB37       |
 
+## Onboarding Questionnaire Implementation Notes (2026-04-23)
+
+### Repo / architecture findings
+
+- The local repo in `/home/worker/repo` is the ShiftMap Next.js app even though `git remote -v` still points to `git@github.com:nanocorp-hq/capia.git`.
+- The site branding, metadata, and Stripe links in source all match ShiftMap:
+  - `/app/layout.tsx` uses `https://shiftmap.fr`
+  - `/package.json` is named `shiftmap`
+  - `/components/SiteHeader.tsx` and `/components/SiteFooter.tsx` render the ShiftMap navigation and footer
+- For this task, the remote should be switched to the requested GitHub repo before pushing:
+  - `https://github.com/vincepanik/shiftmap`
+
+### UI findings
+
+- The homepage design system is defined centrally in `/app/globals.css` with:
+  - color palette tokens around `--navy`, `--blue`, `--off-white`
+  - typography pairing `Fraunces` + `DM Sans`
+  - reusable CTA classes like `.btn`, `.btn-primary`, `.btn-outline`
+- The header component already supports internal pages through:
+  - `absoluteLinks`
+  - `solid`
+- This makes it suitable for a new `/onboarding` page without changing the homepage layout.
+
+### Email / backend findings
+
+- Runtime environment names available in the worker on `2026-04-23`:
+  - `DATABASE_URL`
+  - `NANOCORP_BACKEND_URL`
+  - `VERCEL_PROJECT_URL`
+- No obvious configured mail provider variables are present in the worker for:
+  - Resend
+  - SMTP
+  - SendGrid
+  - Mailgun
+  - Postmark
+- Safest MVP implementation for `/api/onboarding`:
+  - validate and normalize payload server-side
+  - attempt provider-based send only if explicit env vars are present later
+  - otherwise log the submission on the server and return success so sales flow is not blocked during implementation
+
+### Implementation completed
+
+- Added a new onboarding flow page at `/app/onboarding/page.tsx`.
+- Added the interactive client form component at `/app/onboarding/OnboardingForm.tsx`.
+- Added shared questionnaire options and labels at `/lib/onboarding.ts`.
+- Added the submission endpoint at `/app/api/onboarding/route.ts`.
+- Added homepage pricing-section follow-up CTA pointing to `/onboarding` in `/app/page.tsx`.
+- Added dedicated onboarding styles in `/app/globals.css`.
+
+### Submission behavior implemented
+
+- The form collects:
+  - company name
+  - industry
+  - company size
+  - approximate revenue
+  - current tools
+  - main operational challenges
+  - AI maturity
+  - priority departments
+  - indicative budget
+  - contact email
+  - purchased offer
+- The form shows a post-submit confirmation state with the requested message including the submitted email address.
+- Server route behavior:
+  - validates the payload
+  - if `RESEND_API_KEY` is present later, it will attempt an email to `capia@nanocorp.app` (or `ONBOARDING_NOTIFICATION_EMAIL` if configured)
+  - if no email provider is configured, it logs the normalized submission on the server and still returns success
+
+### Environment verification
+
+- `nanocorp vercel env list` on `2026-04-23` returned only:
+  - `_DOMAIN_HINT`
+  - `DATABASE_URL`
+- No email-provider env var is currently configured on Vercel for this project.
+- As implemented today, production will use the server-log fallback until a mail provider env var is added.
+
+### Local verification performed
+
+- `npm install` completed successfully on `2026-04-23`.
+- `npm run build` completed successfully on `2026-04-23`.
+- `agent-browser install` was required in this worker because Chrome was missing again.
+- Browser verification on local dev confirmed:
+  - `/onboarding` renders with the ShiftMap header/footer and the full questionnaire
+  - the homepage contains an `a[href="/onboarding"]` CTA with text `Remplir le questionnaire`
+  - submitting the form transitions to the confirmation state with the `Merci !` message
+- API verification on local dev:
+  - `POST /api/onboarding` returned `{"success":true,"deliveryMethod":"log"}`
+  - server console logged the full normalized submission payload as expected
+
 ### Combined Payment Link (all active products)
 
 ```

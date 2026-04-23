@@ -360,6 +360,12 @@ export default function Home() {
           </div>
 
           <p className="pricing-note">Tous les prix sont indiqués HT. TVA française applicable selon votre situation. Paiement sécurisé via Stripe.</p>
+          <div className="pricing-followup fade-up">
+            <p>Déjà payé ? Remplissez le questionnaire pour lancer la préparation de votre feuille de route.</p>
+            <a href="/onboarding" className="btn btn-secondary">
+              Remplir le questionnaire
+            </a>
+          </div>
         </div>
       </section>
 
