@@ -1,5 +1,45 @@
 # ShiftMap / CapIA — Project Documentation
 
+## Landing Page Example Report Section (2026-04-23)
+
+### Request checked
+
+- Add a new landing-page section between `#solution` and `#tarifs` in `/app/page.tsx`.
+- Section requirements:
+  - id: `#exemple-rapport`
+  - title: `Ce que vous recevez en 24 heures`
+  - subtitle: `Un rapport PDF clair et actionnable, structuré autour de votre entreprise.`
+  - 4 illustrated report blocks
+  - CTA text: `Obtenir mon rapport maintenant`
+  - CTA target: `https://buy.stripe.com/eVq00k3HeaH536qcsXeOB35`
+- Optionally add a navigation anchor to the new section.
+- Keep all existing Stripe URLs elsewhere unchanged.
+
+### Findings
+
+- The GitHub target `vincepanik/shiftmap` is not on the same commit history as the worker's default `/home/worker/repo`; pushing from that repo would have mixed two diverged histories.
+- A clean worktree was created from `shiftmap/main` at `/tmp/shiftmap-main.ChmWza` and used as the authoritative repo for this change.
+- In this target repo version, the landing-page navigation is defined directly inside `/app/page.tsx`, not via `/components/SiteHeader.tsx`.
+- The existing design system in `/app/globals.css` already uses the same card language, pale backgrounds, and responsive grid utilities needed for a coherent insertion.
+
+### Action taken
+
+- Added a new section `#exemple-rapport` in `/app/page.tsx` between `#solution` and `#tarifs`.
+- Added 4 report-preview cards covering:
+  - `Vos 3 cas d'usage prioritaires`
+  - `Plan d'action en 4 semaines`
+  - `Outils recommandés`
+  - `ROI estimé par cas d'usage`
+- Added a dedicated CTA under the section pointing to `https://buy.stripe.com/eVq00k3HeaH536qcsXeOB35`.
+- Added an `Aperçu` anchor in both the desktop and mobile landing-page navigation menus.
+- Added dedicated responsive styling in `/app/globals.css`:
+  - light differentiated background
+  - 2-column desktop grid
+  - 1-column mobile grid
+  - report-preview shell and card styling consistent with the landing page
+- Ran `npm install` successfully in `/tmp/shiftmap-main.ChmWza`.
+- Ran `npm run build` successfully in `/tmp/shiftmap-main.ChmWza`.
+
 ## Outbound Wave 2 Email 3 (J8) (2026-04-22)
 
 ### Request checked

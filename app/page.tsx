@@ -5,6 +5,28 @@ import { useEffect, useState } from 'react';
 export default function Home() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const handleMobileMenuClose = () => setIsMobileMenuOpen(false);
+  const reportPreviewSections = [
+    {
+      icon: '🎯',
+      title: "Vos 3 cas d'usage prioritaires",
+      description: 'Identifiés selon votre secteur, vos outils actuels et vos défis spécifiques.',
+    },
+    {
+      icon: '📋',
+      title: "Plan d'action en 4 semaines",
+      description: 'Quoi faire, dans quel ordre, avec quels outils — semaine par semaine.',
+    },
+    {
+      icon: '🛠',
+      title: 'Outils recommandés',
+      description: "Une sélection d'outils IA adaptés à votre taille d'entreprise et à votre budget.",
+    },
+    {
+      icon: '📈',
+      title: "ROI estimé par cas d'usage",
+      description: 'Gain de temps estimé, économies potentielles, et indicateurs de succès à suivre.',
+    },
+  ] as const;
 
   useEffect(() => {
     // Nav scroll effect
@@ -43,6 +65,7 @@ export default function Home() {
           <ul className="nav-links">
             <li><a href="#probleme">Problème</a></li>
             <li><a href="#solution">Comment ça marche</a></li>
+            <li><a href="#exemple-rapport">Aperçu</a></li>
             <li><a href="#tarifs">Tarifs</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="/blog">Blog</a></li>
@@ -55,6 +78,7 @@ export default function Home() {
           >
             <li><a href="#probleme" onClick={handleMobileMenuClose}>Problème</a></li>
             <li><a href="#solution" onClick={handleMobileMenuClose}>Comment ça marche</a></li>
+            <li><a href="#exemple-rapport" onClick={handleMobileMenuClose}>Aperçu</a></li>
             <li><a href="#tarifs" onClick={handleMobileMenuClose}>Tarifs</a></li>
             <li><a href="#faq" onClick={handleMobileMenuClose}>FAQ</a></li>
             <li><a href="https://buy.stripe.com/eVq00k3HeaH536qcsXeOB35" className="nav-cta" target="_blank" rel="noopener noreferrer" onClick={handleMobileMenuClose}>Démarrer maintenant</a></li>
@@ -216,6 +240,54 @@ export default function Home() {
               </p>
               <div className="step-badge">Livraison en 24h ouvrées</div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* EXEMPLE DE RAPPORT */}
+      <section id="exemple-rapport">
+        <div className="container">
+          <div className="report-preview-header">
+            <span className="section-label">Exemple de rapport</span>
+            <h2 className="section-title">Ce que vous recevez en 24 heures</h2>
+            <p>Un rapport PDF clair et actionnable, structuré autour de votre entreprise.</p>
+          </div>
+
+          <div className="report-preview-shell fade-up">
+            <div className="report-preview-topline">
+              <div>
+                <div className="report-preview-kicker">Aperçu du livrable</div>
+                <p className="report-preview-intro">
+                  Un document pensé pour être lu vite, partagé en comité de direction,
+                  puis transformé en plan d&apos;action concret.
+                </p>
+              </div>
+              <div className="report-preview-meta">
+                <span>PDF livré par email</span>
+                <span>Format décisionnel</span>
+                <span>24h ouvrées</span>
+              </div>
+            </div>
+
+            <div className="report-preview-grid">
+              {reportPreviewSections.map((section, index) => (
+                <article className="report-preview-card fade-up" key={section.title}>
+                  <div className="report-preview-card-head">
+                    <div className="report-preview-icon" aria-hidden="true">{section.icon}</div>
+                    <div className="report-preview-index">Section {String(index + 1).padStart(2, '0')}</div>
+                  </div>
+                  <h3>{section.title}</h3>
+                  <p>{section.description}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <div className="report-preview-cta fade-up">
+            <a href="https://buy.stripe.com/eVq00k3HeaH536qcsXeOB35" className="btn btn-primary" target="_blank" rel="noopener noreferrer">
+              Obtenir mon rapport maintenant
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </a>
           </div>
         </div>
       </section>
