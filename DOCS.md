@@ -543,6 +543,40 @@ All products are live in NanoCorp's Stripe account with EUR currency.
 - Feature commit created with the requested message:
   - `feat: add client onboarding questionnaire page`
 - Local worker history had diverged from `vincepanik/shiftmap`, so the feature commit was cherry-picked onto the fetched remote `main` before push.
+
+## 2026-04-24 - Resend onboarding notification follow-up
+
+### Codebase findings
+
+- `app/api/onboarding/route.ts` already contained the Resend delivery path:
+  - it posts to `https://api.resend.com/emails` when `RESEND_API_KEY` is present
+  - it falls back to server logging when the key is absent or the send fails
+- `app/onboarding/OnboardingForm.tsx` already posts directly to `/api/onboarding`, so no additional client-side wiring was missing.
+- There was no `.env.example` file in the repo. Added one documenting:
+  - `RESEND_API_KEY`
+  - `RESEND_FROM_EMAIL`
+  - `ONBOARDING_NOTIFICATION_EMAIL`
+
+### External verification
+
+- Live production check on `2026-04-24`:
+  - `POST https://www.shiftmap.fr/api/onboarding` with a valid sample payload returned `{"success":true,"deliveryMethod":"log"}`
+  - this confirms the live site is still running the fallback path and is not currently sending via Resend
+- Browser automation against `https://vercel.com/dashboard` reached the unauthenticated Vercel login screen.
+- The NanoCorp helper in this worker remains bound to `https://capia.nanocorp.app` via `VERCEL_PROJECT_URL`, so `nanocorp vercel env list/set` cannot be used here to manage ShiftMap's Vercel project.
+
+### Repo changes made
+
+- Added `.env.example` so the required Resend env contract is explicit in the repository.
+- Updated `app/api/onboarding/route.ts` so notification emails/logs now include the submission timestamp and failed Resend responses log both HTTP status and response body for faster diagnosis.
+- Local verification on `2026-04-24`:
+  - `npm install` completed successfully
+  - `npm run build` completed successfully
+
+### Remaining external blockers
+
+- No authenticated access to the ShiftMap Vercel project was available from this worker, so `RESEND_API_KEY`, `RESEND_FROM_EMAIL`, and `ONBOARDING_NOTIFICATION_EMAIL` could not be set on the actual ShiftMap deployment.
+- No authenticated Resend account session or existing API key was available in the repo/worker, so a production Resend key could not be generated from this session.
 - Pushed successfully to `vincepanik/shiftmap` `main` on `2026-04-23`:
   - previous remote head: `d3320de`
   - new remote head: `ae240d0`

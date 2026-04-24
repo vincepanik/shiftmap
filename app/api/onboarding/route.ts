@@ -91,10 +91,11 @@ function normalizePayload(payload: unknown): OnboardingPayload | null {
   };
 }
 
-function buildTextSummary(submission: OnboardingPayload) {
+function buildTextSummary(submission: OnboardingPayload, submittedAt: string) {
   return [
     "Nouvelle demande de feuille de route ShiftMap",
     "",
+    `Soumis le : ${submittedAt}`,
     `Entreprise : ${submission.companyName}`,
     `Secteur : ${submission.industry}`,
     `Effectif : ${companySizeLabels[submission.companySize]}`,
@@ -109,8 +110,9 @@ function buildTextSummary(submission: OnboardingPayload) {
   ].join("\n");
 }
 
-function buildHtmlSummary(submission: OnboardingPayload) {
+function buildHtmlSummary(submission: OnboardingPayload, submittedAt: string) {
   const rows = [
+    ["Soumis le", submittedAt],
     ["Entreprise", submission.companyName],
     ["Secteur", submission.industry],
     ["Effectif", companySizeLabels[submission.companySize]],
@@ -169,8 +171,9 @@ export async function POST(request: Request) {
   const resendApiKey = process.env.RESEND_API_KEY;
   const resendFrom = process.env.RESEND_FROM_EMAIL ?? "ShiftMap <onboarding@resend.dev>";
   const subject = `Nouvelle demande ShiftMap — ${submission.companyName}`;
-  const text = buildTextSummary(submission);
-  const html = buildHtmlSummary(submission);
+  const submittedAt = new Date().toISOString();
+  const text = buildTextSummary(submission, submittedAt);
+  const html = buildHtmlSummary(submission, submittedAt);
 
   if (resendApiKey) {
     try {
@@ -197,7 +200,10 @@ export async function POST(request: Request) {
         });
       }
 
-      console.error("Resend onboarding delivery failed", await resendResponse.text());
+      console.error("Resend onboarding delivery failed", {
+        status: resendResponse.status,
+        body: await resendResponse.text(),
+      });
     } catch (error) {
       console.error("Resend onboarding delivery errored", error);
     }
@@ -207,7 +213,7 @@ export async function POST(request: Request) {
     "[shiftmap-onboarding]",
     JSON.stringify(
       {
-        submittedAt: new Date().toISOString(),
+        submittedAt,
         notificationEmail,
         subject,
         submission,
