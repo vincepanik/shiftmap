@@ -26,6 +26,29 @@
   - the submitted email is shown in the success copy
 - The API route `/app/api/onboarding/route.ts` returns `{ success: true }` on valid submissions, using Resend when configured and a log fallback otherwise, so the visible confirmation is already wired from the frontend perspective.
 
+### Action taken
+
+- Added `/app/merci/page.tsx` with:
+  - centered success icon `✅`
+  - title `Merci pour votre commande !`
+  - subtitle about the 24-hour delivery window
+  - explanatory paragraph about the questionnaire
+  - main CTA `Remplir le questionnaire maintenant →` linking to `/onboarding`
+  - report-delivery note
+  - additional support note: spam check / `contact@shiftmap.fr`
+- Added dedicated styling for the new confirmation page in `/app/globals.css`:
+  - same ShiftMap palette and typography
+  - centered card layout
+  - responsive spacing and typography for mobile
+- Added page-level SEO metadata for `/merci` with `noindex, nofollow`.
+- Verified locally that:
+  - `/merci` renders with the requested heading and visible CTA
+  - the rendered HTML contains `href="/onboarding"` for the CTA
+  - `/onboarding` still loads correctly
+  - `POST /api/onboarding` returns `{"success":true,"deliveryMethod":"log"}` on a valid payload
+- Ran `npm install` successfully.
+- Ran `npm run build` successfully.
+
 ## Landing Page Example Report Section (2026-04-23)
 
 ### Request checked
