@@ -1568,6 +1568,101 @@ footer {
 /* =====================
    ONBOARDING
 ===================== */
+.thankyou-page {
+  min-height: 100vh;
+  padding: 132px 0 72px;
+  background:
+    radial-gradient(circle at top left, rgba(29,110,255,0.16), transparent 28%),
+    radial-gradient(circle at 88% 14%, rgba(11,29,51,0.08), transparent 18%),
+    linear-gradient(180deg, #f8faff 0%, #eef3fb 100%);
+}
+
+.thankyou-shell {
+  display: flex;
+  align-items: center;
+  min-height: calc(100vh - 204px);
+}
+
+.thankyou-card {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 48px;
+  border-radius: 34px;
+  border: 1px solid rgba(11,29,51,0.08);
+  background: rgba(255,255,255,0.92);
+  box-shadow: 0 24px 80px rgba(11,29,51,0.1);
+  text-align: center;
+}
+
+.thankyou-icon {
+  margin-bottom: 22px;
+  font-size: 72px;
+  line-height: 1;
+}
+
+.thankyou-title {
+  font-family: var(--font-display);
+  font-size: clamp(38px, 5vw, 60px);
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+  color: var(--navy);
+}
+
+.thankyou-subtitle {
+  max-width: 580px;
+  margin: 20px auto 0;
+  font-size: 22px;
+  line-height: 1.45;
+  color: var(--blue-dim);
+  font-weight: 500;
+}
+
+.thankyou-body {
+  max-width: 620px;
+  margin: 24px auto 0;
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--text-muted);
+}
+
+.thankyou-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 34px;
+}
+
+.thankyou-cta {
+  padding: 18px 34px;
+  font-size: 17px;
+}
+
+.thankyou-note {
+  max-width: 560px;
+  margin: 28px auto 0;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-main);
+}
+
+.thankyou-support {
+  max-width: 620px;
+  margin: 30px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid rgba(11,29,51,0.08);
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--text-muted);
+}
+
+.thankyou-support a {
+  color: var(--blue);
+  font-weight: 500;
+}
+
+.thankyou-support a:hover {
+  color: var(--blue-glow);
+}
+
 .onboarding-page {
   background:
     radial-gradient(circle at top left, rgba(29,110,255,0.14), transparent 30%),
@@ -2055,6 +2150,7 @@ footer {
   .blog-article-card { padding: 32px; }
   .blog-section { grid-template-columns: 1fr; gap: 10px; }
   .blog-section-index { justify-content: flex-start; }
+  .thankyou-card { padding: 40px 32px; }
   .onboarding-layout { grid-template-columns: 1fr; }
   .onboarding-aside { position: static; }
   .onboarding-form-panel { padding: 30px; }
@@ -2085,6 +2181,14 @@ footer {
   .blog-card,
   .blog-article-card,
   .blog-conclusion { padding: 24px; }
+  .thankyou-page { padding: 116px 0 48px; }
+  .thankyou-shell { min-height: auto; }
+  .thankyou-card { padding: 28px 22px; border-radius: 26px; }
+  .thankyou-icon { font-size: 60px; }
+  .thankyou-subtitle { font-size: 19px; }
+  .thankyou-body { font-size: 17px; }
+  .thankyou-note,
+  .thankyou-support { font-size: 14px; }
   .onboarding-hero { padding: 128px 0 52px; }
   .onboarding-form-panel,
   .onboarding-aside-card { padding: 24px; }

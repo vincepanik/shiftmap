@@ -1,5 +1,31 @@
 # ShiftMap / CapIA — Project Documentation
 
+## Post-Payment `/merci` Page + Onboarding Verification (2026-04-25)
+
+### Request checked
+
+- Add a dedicated post-payment confirmation page at `/merci`.
+- Keep all Stripe URLs unchanged.
+- Make the page guide the client clearly to `/onboarding`.
+- Add appropriate SEO metadata for a confirmation page.
+- Verify whether the onboarding form already ends with a visible confirmation state.
+
+### Findings
+
+- The worker default repo at `/home/worker/repo` is a ShiftMap codebase copy, but its `origin` remote still points to `nanocorp-hq/capia`; it is not the authoritative GitHub export target for this task.
+- The authoritative repo for this task was cloned from `https://github.com/vincepanik/shiftmap` into `/tmp/shiftmap-target-20260425` on `main` at commit `689f721c69f668dcb501571b77695a143946a9da`.
+- In this target repo, the relevant existing files are:
+  - `/app/onboarding/page.tsx`
+  - `/app/onboarding/OnboardingForm.tsx`
+  - `/app/api/onboarding/route.ts`
+  - `/components/SiteHeader.tsx`
+  - `/components/SiteFooter.tsx`
+- The onboarding flow already has a visible success state in `/app/onboarding/OnboardingForm.tsx`:
+  - after a successful POST to `/api/onboarding`, `submissionState` switches to `"success"`
+  - the form is replaced by a confirmation panel headed `Merci !`
+  - the submitted email is shown in the success copy
+- The API route `/app/api/onboarding/route.ts` returns `{ success: true }` on valid submissions, using Resend when configured and a log fallback otherwise, so the visible confirmation is already wired from the frontend perspective.
+
 ## Landing Page Example Report Section (2026-04-23)
 
 ### Request checked
