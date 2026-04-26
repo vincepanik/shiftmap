@@ -1,5 +1,60 @@
 # ShiftMap / CapIA — Project Documentation
 
+## 2026-04-26 - Neon persistence for onboarding submissions
+
+### Request checked
+
+- Persist every `/onboarding` form submission in Neon instead of relying only on the server-log fallback.
+- Keep the existing Resend notification path intact.
+- Make the database setup reproducible in the repo and verify that the Next.js build still passes.
+
+### Codebase findings
+
+- The target repo for this task is `vincepanik/shiftmap` on `main`, cloned locally at `/home/worker/shiftmap`.
+- `DATABASE_URL` is available in the worker environment and points to a Neon Postgres instance.
+- `app/api/onboarding/route.ts` already normalized and validated the payload, then:
+  - sent the notification through Resend when `RESEND_API_KEY` is configured
+  - fell back to a server-side log when Resend is unavailable
+- No Postgres client dependency was installed in the repo before this task.
+- Existing project docs already recorded that NanoCorp Vercel helpers in this worker are not bound to the ShiftMap Vercel project, so project env vars cannot be managed from here safely.
+
+### Database work completed
+
+- Created the Neon table directly in the live database on `2026-04-26`:
+  - `onboarding_submissions`
+- Verified the resulting schema includes:
+  - `id`, `created_at`, `email`, `company_name`, `sector`, `headcount`, `revenue`
+  - `current_tools`, `main_challenges`, `ai_maturity`, `priority_departments`
+  - `ai_budget`, `offer_purchased`
+- Added a reproducible SQL init file at `/scripts/init-onboarding-submissions.sql` with the same `CREATE TABLE IF NOT EXISTS ...` statement.
+
+### Repo changes made
+
+- Added `pg` and `@types/pg` to `package.json`.
+- Added `/lib/db.ts`:
+  - lazy, reusable Postgres pool based on `process.env.DATABASE_URL`
+  - small `query()` helper for server-side DB access
+- Updated `/app/api/onboarding/route.ts`:
+  - inserts each validated submission into `onboarding_submissions`
+  - returns HTTP 500 if persistence fails, so the client can retry instead of silently losing the order
+  - keeps the existing Resend path unchanged after the DB write succeeds
+  - keeps the existing server-log fallback when Resend is missing or fails
+- Updated `/.env.example` to document the required `DATABASE_URL`.
+
+### Verification performed
+
+- `npm install` completed successfully on `2026-04-26`.
+- `npm run build` completed successfully on `2026-04-26`.
+- Production-like local verification on `2026-04-26`:
+  - started the built app with `npm run start`
+  - `POST /api/onboarding` returned `{"success":true,"deliveryMethod":"log"}` with a valid payload
+  - confirmed that the request created a row in `onboarding_submissions`
+  - deleted the temporary test row immediately after verification, leaving the table empty again
+
+### External blocker
+
+- `DATABASE_URL` could not be added via `nanocorp vercel env set` for ShiftMap from this worker because the available NanoCorp Vercel integration is still scoped to the separate `capia.nanocorp.app` project, not the ShiftMap Vercel project.
+
 ## Post-Payment `/merci` Page + Onboarding Verification (2026-04-25)
 
 ### Request checked

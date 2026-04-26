@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { query } from "@/lib/db";
 import {
   aiMaturityLabels,
   aiMaturityOptions,
@@ -154,6 +155,40 @@ function buildHtmlSummary(submission: OnboardingPayload, submittedAt: string) {
   `;
 }
 
+async function persistSubmission(submission: OnboardingPayload) {
+  await query(
+    `
+      INSERT INTO onboarding_submissions (
+        email,
+        company_name,
+        sector,
+        headcount,
+        revenue,
+        current_tools,
+        main_challenges,
+        ai_maturity,
+        priority_departments,
+        ai_budget,
+        offer_purchased
+      )
+      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9::text[], $10, $11)
+    `,
+    [
+      submission.contactEmail,
+      submission.companyName,
+      submission.industry,
+      submission.companySize,
+      submission.revenue,
+      submission.currentTools,
+      submission.mainChallenges,
+      submission.aiMaturity,
+      submission.priorities,
+      submission.budget,
+      submission.purchasedOffer,
+    ],
+  );
+}
+
 export async function POST(request: Request) {
   const payload = await request.json().catch(() => null);
   const submission = normalizePayload(payload);
@@ -174,6 +209,19 @@ export async function POST(request: Request) {
   const submittedAt = new Date().toISOString();
   const text = buildTextSummary(submission, submittedAt);
   const html = buildHtmlSummary(submission, submittedAt);
+
+  try {
+    await persistSubmission(submission);
+  } catch (error) {
+    console.error("Failed to persist onboarding submission", error);
+
+    return NextResponse.json(
+      {
+        error: "Impossible d'enregistrer votre demande pour le moment. Réessayez dans quelques instants.",
+      },
+      { status: 500 },
+    );
+  }
 
   if (resendApiKey) {
     try {
