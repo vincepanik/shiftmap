@@ -1,5 +1,53 @@
 # ShiftMap / CapIA — Project Documentation
 
+## Landing Page FAQ + Final CTA Update (2026-04-27)
+
+### Exploration findings
+
+- Read the existing `DOCS.md` first as required before new exploration.
+- The landing page is implemented in `/home/worker/repo/app/page.tsx`.
+- Shared navigation and footer live in:
+  - `/home/worker/repo/components/SiteHeader.tsx`
+  - `/home/worker/repo/components/SiteFooter.tsx`
+- Global landing-page styling is in `/home/worker/repo/app/globals.css`.
+- The header and footer already include `#faq` anchor links, so the FAQ section is expected by the navigation.
+- The page already had both a FAQ section and a bottom CTA section, but their content did not match the requested conversion brief.
+- Existing live Stripe URLs reused for this task:
+  - Starter Report: `https://buy.stripe.com/00w00lccefQi0Ce6rl5wI00`
+  - Pro Report: `https://buy.stripe.com/14AdRba467jM5Wy8zt5wI01`
+
+### Planned change
+
+- Replace the current 5 FAQ entries with the 5 new objection-handling questions and answers provided in the task.
+- Replace the current final CTA copy and actions with:
+  - title: `Prêt à passer à l'IA ?`
+  - subtitle: `Obtenez votre feuille de route en 24 heures — sans engagement.`
+  - two CTA buttons for Starter and Pro using the unchanged existing Stripe URLs.
+
+### Completed change
+
+- Updated `/home/worker/repo/app/page.tsx`:
+  - replaced the previous FAQ content with the 5 requested objection-handling entries
+  - kept the FAQ as a CSS-only accordion and opened the first answer by default
+  - replaced the previous bottom CTA with the requested centered copy and two side-by-side buttons:
+    - `Démarrer Starter — 97€`
+    - `Démarrer Pro — 147€`
+  - reused the existing live Starter and Pro Stripe URLs already present in the landing page
+- Updated `/home/worker/repo/app/globals.css`:
+  - widened the final CTA content container slightly
+  - added a dedicated `.cta-final-btn` rule so both CTA buttons align cleanly and remain readable on desktop/mobile
+
+### Verification
+
+- Installed project dependencies locally with `npm ci` because `node_modules` was absent in this worker.
+- `npm run build` completed successfully on `2026-04-27`.
+- Started the production server locally with `npm run start` and verified the bottom of the page with `agent-browser`.
+- Visual check confirmed:
+  - FAQ section headline: `Levez les dernières objections`
+  - all 5 requested FAQ questions present
+  - final CTA headline: `Prêt à passer à l'IA ?`
+  - both CTA buttons present with the correct Starter and Pro labels
+
 ## Outbound Wave 3 Email 1 (2026-04-27)
 
 ### Request checked

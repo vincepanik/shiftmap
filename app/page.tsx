@@ -2,6 +2,34 @@
 
 import { useEffect, useState } from 'react';
 
+const faqItems = [
+  {
+    question: 'Combien de temps faut-il pour recevoir ma feuille de route ?',
+    answer:
+      'Votre feuille de route personnalisée vous est livrée en 24 heures après validation de votre questionnaire.',
+  },
+  {
+    question: 'Qui génère la feuille de route — un humain ou une IA ?',
+    answer:
+      "Notre système combine l'IA et l'expertise sectorielle pour produire une feuille de route fiable, actionnelle et adaptée à votre PME.",
+  },
+  {
+    question: 'Ma feuille de route sera-t-elle vraiment personnalisée ?',
+    answer:
+      'Oui. Elle est basée sur votre secteur, votre taille, vos outils existants et vos priorités business — pas un template générique.',
+  },
+  {
+    question: 'Quelle est la différence entre Starter et Pro ?',
+    answer:
+      "Le Starter identifie vos 3 cas d'usage IA prioritaires. Le Pro ajoute une analyse concurrentielle, une roadmap sur 12 mois et une session de questions/réponses asynchrone.",
+  },
+  {
+    question: 'Puis-je obtenir un remboursement ?',
+    answer:
+      "Si vous n'êtes pas satisfait de votre feuille de route, contactez-nous sous 7 jours et nous vous remboursons intégralement.",
+  },
+];
+
 export default function Home() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const handleMobileMenuClose = () => setIsMobileMenuOpen(false);
@@ -516,9 +544,9 @@ export default function Home() {
           <div className="faq-layout">
             <div className="faq-aside">
               <span className="section-label">FAQ</span>
-              <h2 className="section-title">Questions <em>fréquentes</em></h2>
+              <h2 className="section-title">Levez les <em>dernières objections</em></h2>
               <p>
-                Vous avez d&apos;autres questions ? Contactez-nous directement par email, nous répondons en moins de 24h.
+                Tout est pensé pour vous aider à prendre une décision rapidement, avec une offre simple, un rendu rapide et un risque limité.
               </p>
               <a href="mailto:contact@shiftmap.fr" className="btn btn-outline" style={{marginTop:'24px'}}>
                 Nous écrire →
@@ -526,72 +554,18 @@ export default function Home() {
             </div>
 
             <div className="faq-list">
-
-              <div className="faq-item">
-                <input type="checkbox" id="faq1" />
-                <label className="faq-label" htmlFor="faq1">
-                  À qui s&apos;adresse ShiftMap ?
-                  <span className="faq-icon"></span>
-                </label>
-                <div className="faq-body">
-                  <div className="faq-body-inner">
-                    ShiftMap s&apos;adresse aux PME françaises de 20 à 100 salariés, en particulier aux dirigeants, DG, COO, responsables opérations ou bras droits de direction qui veulent cadrer un premier plan IA sans lancer une mission lourde. Aucune expertise technique n&apos;est requise.
+              {faqItems.map((item, index) => (
+                <div className="faq-item" key={item.question}>
+                  <input type="checkbox" id={`faq${index + 1}`} defaultChecked={index === 0} />
+                  <label className="faq-label" htmlFor={`faq${index + 1}`}>
+                    {item.question}
+                    <span className="faq-icon"></span>
+                  </label>
+                  <div className="faq-body">
+                    <div className="faq-body-inner">{item.answer}</div>
                   </div>
                 </div>
-              </div>
-
-              <div className="faq-item">
-                <input type="checkbox" id="faq2" />
-                <label className="faq-label" htmlFor="faq2">
-                  Combien de temps faut-il mobiliser de mon côté ?
-                  <span className="faq-icon"></span>
-                </label>
-                <div className="faq-body">
-                  <div className="faq-body-inner">
-                    Le plus souvent, moins d&apos;une heure pour remplir le questionnaire de cadrage en ligne. C&apos;est tout. Une fois soumis, nous prenons le relais et vous livrons votre feuille de route en 24 heures ouvrées.
-                  </div>
-                </div>
-              </div>
-
-              <div className="faq-item">
-                <input type="checkbox" id="faq3" />
-                <label className="faq-label" htmlFor="faq3">
-                  Que signifie exactement &quot;en 24 heures&quot; ?
-                  <span className="faq-icon"></span>
-                </label>
-                <div className="faq-body">
-                  <div className="faq-body-inner">
-                    Le délai de 24 heures commence à partir de la réception de votre questionnaire complet. Il s&apos;agit de 24 heures ouvrées (jours de semaine, hors jours fériés). Vous recevez votre feuille de route par email au format PDF.
-                  </div>
-                </div>
-              </div>
-
-              <div className="faq-item">
-                <input type="checkbox" id="faq4" />
-                <label className="faq-label" htmlFor="faq4">
-                  Est-ce que ShiftMap va déployer les outils pour nous ?
-                  <span className="faq-icon"></span>
-                </label>
-                <div className="faq-body">
-                  <div className="faq-body-inner">
-                    Non. ShiftMap est une offre de cadrage décisionnel rapide. Elle vous aide à choisir quoi lancer en premier, mais n&apos;inclut ni intégration technique, ni développement, ni déploiement. Vous restez libre de passer à l&apos;action avec vos équipes, vos partenaires, ou dans un accompagnement séparé.
-                  </div>
-                </div>
-              </div>
-
-              <div className="faq-item">
-                <input type="checkbox" id="faq5" />
-                <label className="faq-label" htmlFor="faq5">
-                  Et si notre contexte est très spécifique ou technique ?
-                  <span className="faq-icon"></span>
-                </label>
-                <div className="faq-body">
-                  <div className="faq-body-inner">
-                    La recommandation est construite à partir de votre secteur, de vos objectifs, de vos contraintes et de vos outils existants. Ce n&apos;est pas une liste générique de cas d&apos;usage. Plus votre questionnaire est détaillé, plus la feuille de route sera pertinente pour votre situation.
-                  </div>
-                </div>
-              </div>
-
+              ))}
             </div>
           </div>
         </div>
@@ -601,20 +575,17 @@ export default function Home() {
       <section id="cta-final">
         <div className="container">
           <div className="cta-final-content">
-            <h2 className="cta-final-title">
-              Passez de &quot;il faudrait faire quelque chose avec l&apos;IA&quot;<br />
-              <em>à un plan clair en 24 heures.</em>
-            </h2>
-            <p className="cta-final-sub">
-              Une feuille de route sur mesure, priorisée, et adaptée à votre entreprise. Sans jargon, sans chantier inutile.
-            </p>
+            <h2 className="cta-final-title">Prêt à passer à l&apos;IA ?</h2>
+            <p className="cta-final-sub">Obtenez votre feuille de route en 24 heures — sans engagement.</p>
             <div className="cta-final-actions">
-              <a href="https://buy.stripe.com/00w00lccefQi0Ce6rl5wI00" className="btn btn-primary" style={{fontSize:'16px',padding:'16px 32px'}} target="_blank" rel="noopener noreferrer">
-                Démarrer maintenant — 97 €
+              <a href="https://buy.stripe.com/00w00lccefQi0Ce6rl5wI00" className="btn btn-primary cta-final-btn" target="_blank" rel="noopener noreferrer">
+                Démarrer Starter — 97€
               </a>
-              <a href="#tarifs" className="btn btn-secondary">Comparer les offres</a>
+              <a href="https://buy.stripe.com/14AdRba467jM5Wy8zt5wI01" className="btn btn-secondary cta-final-btn" target="_blank" rel="noopener noreferrer">
+                Démarrer Pro — 147€
+              </a>
             </div>
-            <p className="cta-final-micro">Paiement unique. Feuille de route sur mesure livrée en 24h ouvrées. Sans engagement.</p>
+            <p className="cta-final-micro">Paiement unique. Questionnaire rapide. Livraison en 24h après validation.</p>
           </div>
         </div>
       </section>
