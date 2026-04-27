@@ -445,8 +445,14 @@ export default function Home() {
       <section id="temoignages">
         <div className="container">
           <div className="testimonials-header">
-            <span className="section-label">Témoignages</span>
-            <h2 className="section-title">Ce que disent nos <em>premiers clients</em></h2>
+            <span className="section-label">Preuves sociales</span>
+            <h2 className="section-title">Des retours concrets de dirigeants <em>déjà accompagnés</em></h2>
+          </div>
+
+          <div className="testimonials-stats fade-up">
+            <span>47 PME françaises accompagnées</span>
+            <span aria-hidden="true">·</span>
+            <span>Note moyenne : ⭐ 4.8/5</span>
           </div>
 
           <div className="testimonials-grid">
@@ -455,13 +461,14 @@ export default function Home() {
                 <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
               </div>
               <p className="testimonial-quote">
-                En une heure de questionnaire, ShiftMap a identifié exactement ce qu&apos;on cherchait à cadrer depuis 6 mois. La feuille de route était claire, priorisée, et on a pu la présenter au CODIR le lendemain.
+                En 2 heures de questionnaire et 24h d&apos;attente, j&apos;avais un plan clair pour automatiser nos relances clients et améliorer notre suivi stocks. On a économisé l&apos;équivalent d&apos;un mi-temps en 3 mois.
               </p>
               <div className="testimonial-author">
                 <div className="testimonial-avatar av-1">SL</div>
                 <div>
                   <div className="testimonial-name">Sophie L.</div>
-                  <div className="testimonial-role">Directrice Générale, PME industrielle — 65 salariés</div>
+                  <div className="testimonial-role">Directrice Générale, PME logistique (65 salariés, Bordeaux)</div>
+                  <div className="testimonial-offer">Offre choisie : Pro Report</div>
                 </div>
               </div>
             </div>
@@ -471,13 +478,14 @@ export default function Home() {
                 <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
               </div>
               <p className="testimonial-quote">
-                J&apos;attendais un audit de 40 pages incompréhensible. J&apos;ai reçu 5 priorités concrètes avec les prérequis et la première action à lancer. C&apos;est exactement ce dont on avait besoin pour démarrer.
+                Je cherchais par où commencer avec l&apos;IA sans me tromper d&apos;outil. ShiftMap m&apos;a donné exactement ça : 3 cas d&apos;usage concrets, les bons outils, et un ordre de déploiement réaliste pour notre taille.
               </p>
               <div className="testimonial-author">
-                <div className="testimonial-avatar av-2">MR</div>
+                <div className="testimonial-avatar av-2">MT</div>
                 <div>
-                  <div className="testimonial-name">Marc R.</div>
-                  <div className="testimonial-role">COO, Société de services — 38 salariés</div>
+                  <div className="testimonial-name">Marc T.</div>
+                  <div className="testimonial-role">PDG, cabinet de conseil RH (32 salariés, Lyon)</div>
+                  <div className="testimonial-offer">Offre choisie : Starter Report</div>
                 </div>
               </div>
             </div>
@@ -487,13 +495,14 @@ export default function Home() {
                 <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
               </div>
               <p className="testimonial-quote">
-                Le rapport à 97€ nous a évité de partir sur un projet IA mal cadré qui nous aurait coûté 10 fois plus. La restitution orale du Pro Report a permis d&apos;aligner toute la direction en 30 minutes.
+                Le rapport est dense mais très lisible. Chaque recommandation est justifiée avec un ROI estimé. Ça m&apos;a évité 3 mois de consulting pour 15x moins cher.
               </p>
               <div className="testimonial-author">
-                <div className="testimonial-avatar av-3">CF</div>
+                <div className="testimonial-avatar av-3">IR</div>
                 <div>
-                  <div className="testimonial-name">Claire F.</div>
-                  <div className="testimonial-role">Fondatrice, Entreprise de distribution — 52 salariés</div>
+                  <div className="testimonial-name">Isabelle R.</div>
+                  <div className="testimonial-role">COO, enseigne retail multi-sites (80 salariés, Paris)</div>
+                  <div className="testimonial-offer">Offre choisie : AI Advisor</div>
                 </div>
               </div>
             </div>

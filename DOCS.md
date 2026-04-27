@@ -1,5 +1,42 @@
 # ShiftMap / CapIA — Project Documentation
 
+## 2026-04-27 - Social proof section refresh on landing page
+
+### Request checked
+
+- Replace the current placeholder-like testimonials in the landing-page social proof section.
+- Use 3 richer fictional testimonials in French with role, sector, company size, city, and concrete result.
+- Add a social counter line above the testimonial cards.
+- Keep existing Stripe URLs unchanged and avoid footer or blog changes.
+- Run `npm install` and `npm run build`, then commit and push to `main`.
+
+### Codebase findings
+
+- The authoritative repo for this task is `vincepanik/shiftmap`, cloned locally for execution at `/tmp/shiftmap-task.7jzCxX`.
+- The landing-page social proof section already exists in `/app/page.tsx` under `#temoignages`.
+- Existing testimonial styling was already centralized in `/app/globals.css` with `testimonials-*` and `testimonial-*` classes, so the requested update could be done without touching other page sections.
+- The footer, blog routes, and Stripe checkout URLs are outside the required change scope and were left untouched.
+
+### Action taken
+
+- Updated `/app/page.tsx`:
+  - changed the section label from `Témoignages` to `Preuves sociales`
+  - updated the section title to target PME decision-makers more directly
+  - added the requested stats line: `47 PME françaises accompagnées · Note moyenne : ⭐ 4.8/5`
+  - replaced the 3 existing testimonials with the provided fictional customer profiles:
+    - Sophie L. — Directrice Générale, PME logistique (65 salariés, Bordeaux) — `Pro Report`
+    - Marc T. — PDG, cabinet de conseil RH (32 salariés, Lyon) — `Starter Report`
+    - Isabelle R. — COO, enseigne retail multi-sites (80 salariés, Paris) — `AI Advisor`
+  - added an explicit `Offre choisie` line inside each testimonial card for extra credibility
+- Updated `/app/globals.css`:
+  - added styling for the new social stats line
+  - added styling for the testimonial offer label
+
+### Verification performed
+
+- `npm install` completed successfully on `2026-04-27`.
+- `npm run build` completed successfully on `2026-04-27`.
+
 ## 2026-04-26 - Neon persistence for onboarding submissions
 
 ### Request checked
