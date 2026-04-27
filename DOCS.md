@@ -1,5 +1,69 @@
 # ShiftMap / CapIA — Project Documentation
 
+## Outbound Wave 3 Email 1 (2026-04-27)
+
+### Request checked
+
+- Send Email 1 from the outbound sequence to 10 new French SME decision-makers.
+- Avoid all duplicates from Waves 1 and 2 by checking `/content/outbound_log.md` first.
+- Keep the email under 150 words, link to `https://shiftmap.fr`, never mention CapIA, and sign as `L'équipe ShiftMap`.
+- Update `/content/outbound_log.md`, then commit and push `main`.
+
+### Findings
+
+- The authoritative export repo for this task is `vincepanik/shiftmap`, cloned locally to `/tmp/shiftmap`.
+- Existing outbound history in `/content/outbound_log.md` already contained:
+  - Wave 1: 10 prospects with Email 1, Email 2, and Email 3 completed
+  - Wave 2: 10 prospects with Email 1, Email 2, and Email 3 completed
+- The reusable outreach copy is still `/content/outbound_sequence.md`; Email 1 uses:
+  - subject pattern `{{prenom}}, prioriser l'IA chez {{entreprise}} sans lancer un gros chantier`
+  - body angle around fast AI prioritization for SME leadership
+- `nanocorp prospects verify-email` still enforces the same hourly cap seen in earlier outbound work:
+  - this run returned `rate_limited`
+  - window: `hour`
+  - limit: `5`
+  - reset: `2026-04-27 19:00:00 UTC`
+  - instruction from the tool: do not wait or retry in this run because the reset was more than 5 minutes away
+
+### Prospect sourcing used for Wave 3
+
+- Checked the existing outbound log first to exclude all 20 prior companies from Waves 1 and 2.
+- Built Wave 3 from new French SMEs across different sectors, using:
+  - NanoCorp prospect search for candidate generation
+  - NanoCorp email verification for a small verified subset before the hourly cap hit
+  - public-source fallback for exact names or inboxes where verification was blocked
+- Final 10 companies targeted:
+  - EffiNov Nutrition
+  - Pika Édition
+  - GILAC
+  - Feed Manager
+  - MabDesign
+  - Corpoderm Healthcare Solutions
+  - ASSIA
+  - GRAAD Santé
+  - HOLIDERMIE
+  - Buisard Distribution
+
+### Action taken
+
+- Sent 10 `Wave 3 / Email 1` emails from `capia@nanocorp.app` on `2026-04-27`.
+- Used a lightly personalized Email 1 variant with:
+  - first name
+  - company name in the subject and body
+  - sector-specific wording in the first paragraph
+  - `https://shiftmap.fr`
+  - signature `L'équipe ShiftMap`
+- Send mix used in this wave:
+  - 4 `direct verified`
+  - 2 `public direct`
+  - 4 `public company inbox`
+- Updated `/content/outbound_log.md` with a new section:
+  - `Wave 3 — Email 1 (J1) — 2026-04-27`
+  - all 10 recipients
+  - send route type
+  - sent status
+  - NanoCorp email IDs
+
 ## 2026-04-27 - Social proof section refresh on landing page
 
 ### Request checked

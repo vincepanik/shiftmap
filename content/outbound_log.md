@@ -90,6 +90,21 @@
 | 2026-04-22 | Frederic Bourzeix | Global SP | Directeur General / CEO | commerce@globalsp.com | Wave 2 / Email 3 | thread reply | sent | 613f0c29-ce9d-4d9d-a1ac-6ea853b87470 | f49eec86-7e5f-4917-9411-24261d1e4b3e |
 | 2026-04-22 | Jerome Vergez | Digicall | CEO | contact@digicall.fr | Wave 2 / Email 3 | thread reply | sent | 5270eab6-1631-4dda-b91f-8bf9e4dfe8fc | f0816ae1-cd23-42a2-b27f-b9796fad8dc0 |
 
+## Wave 3 — Email 1 (J1) — 2026-04-27
+
+| Date (UTC) | Prospect | Company | Role targeted | Email used | Email # | Send type | Status | Email ID |
+|---|---|---|---|---|---|---|---|---|
+| 2026-04-27 | Beatrice Poisson | EffiNov Nutrition | CEO / Directrice Générale | b.poisson@effinov-nutrition.fr | Wave 3 / Email 1 | direct verified | sent | 64bfb7d5-307f-4c9c-b490-21aa3bf39837 |
+| 2026-04-27 | Virginie Daudin-Clavaud | Pika Édition | Directrice Générale - CEO | vdaudin-clavaud@pika.fr | Wave 3 / Email 1 | direct verified | sent | ca7bef60-51a3-4629-8298-9dcf5819553c |
+| 2026-04-27 | Martin Accoceberry | GILAC | Directeur Général / CEO | martin.accoceberry@gilac.com | Wave 3 / Email 1 | direct verified | sent | 34c9f769-372d-436e-b75b-06ed466e6f31 |
+| 2026-04-27 | Laetitia Mure | Feed Manager | Directrice Générale - CEO | l.mure@feed-manager.net | Wave 3 / Email 1 | direct verified | sent | f37db718-cdac-4170-8b70-0f8fbc30afe5 |
+| 2026-04-27 | Nicolas Groux | MabDesign | Directeur Général / CEO | nicolas.groux@mabdesign.fr | Wave 3 / Email 1 | public direct | sent | 95234a99-ceb7-4e8c-b167-c0b13f62912e |
+| 2026-04-27 | Julien Flotats | Corpoderm Healthcare Solutions | Directeur Général / CEO | julien@corpoderm.com | Wave 3 / Email 1 | public direct | sent | 18cb940b-d9df-4552-aeaf-6ed52f4a83f9 |
+| 2026-04-27 | Mathieu Gozard | ASSIA | CEO / Directeur Général | hello@assia.fr | Wave 3 / Email 1 | public company inbox | sent | b72637b8-0903-4ff2-91d5-605fd517fd07 |
+| 2026-04-27 | Olivier Balme | GRAAD Santé | Directeur Général (CEO) | contact.sante@graad.fr | Wave 3 / Email 1 | public company inbox | sent | 1102bf8e-7b34-4149-afa1-de9a283e9b20 |
+| 2026-04-27 | Melanie Huynh-Utzmann | HOLIDERMIE | CEO / Directrice Générale | commercial@holidermie.com | Wave 3 / Email 1 | public company inbox | sent | d19559d6-21e5-4e6c-a342-b6163a611c45 |
+| 2026-04-27 | Virginie Decroix | Buisard Distribution | Directrice Générale / CEO | servicecommercial@buisard-distri.fr | Wave 3 / Email 1 | public company inbox | sent | 459b3cc4-4820-434f-8ba8-15c8bbfeadb7 |
+
 ## Notes
 
 - Email 1 was personalized with first name, company name, and sector.
@@ -107,3 +122,6 @@
 - Wave 2 / Email 2 was sent on `2026-04-21` as a threaded reply to the corresponding `Wave 2 / Email 1` messages for the same 10 prospects.
 - Wave 2 / Email 3 was sent on `2026-04-22` as a threaded reply to the corresponding `Wave 2 / Email 2` messages for the same 10 prospects.
 - Wave 2 / Email 3 used the subject `{{prenom}}, je clôture le sujet ?`, stayed under 100 words, linked to `https://shiftmap.fr`, and used the signature `L'équipe ShiftMap`.
+- Wave 3 / Email 1 was sent on `2026-04-27` to 10 new French prospects distinct from Waves 1 and 2.
+- Wave 3 used first-name and sector personalization, kept the body under 150 words, linked to `https://shiftmap.fr`, and used the signature `L'équipe ShiftMap`.
+- Wave 3 mixed `direct verified`, `public direct`, and `public company inbox` routes because `nanocorp prospects verify-email` hit the platform limit of 5 verifications per hour during the run.
