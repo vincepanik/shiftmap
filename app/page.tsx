@@ -109,7 +109,7 @@ export default function Home() {
             <li><a href="#exemple-rapport" onClick={handleMobileMenuClose}>Aperçu</a></li>
             <li><a href="#tarifs" onClick={handleMobileMenuClose}>Tarifs</a></li>
             <li><a href="#faq" onClick={handleMobileMenuClose}>FAQ</a></li>
-            <li><a href="https://buy.stripe.com/eVq00k3HeaH536qcsXeOB35" className="nav-cta" target="_blank" rel="noopener noreferrer" onClick={handleMobileMenuClose}>Démarrer maintenant</a></li>
+            <li><a href="https://buy.stripe.com/00w00lccefQi0Ce6rl5wI00" className="nav-cta" target="_blank" rel="noopener noreferrer" onClick={handleMobileMenuClose}>Démarrer maintenant</a></li>
           </ul>
           <button
             type="button"
