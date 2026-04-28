@@ -218,6 +218,67 @@
 
 - The worker default repo at `/home/worker/repo` is a ShiftMap codebase copy, but its `origin` remote still points to `nanocorp-hq/capia`; it is not the authoritative GitHub export target for this task.
 - The authoritative repo for this task was cloned from `https://github.com/vincepanik/shiftmap` into `/tmp/shiftmap-target-20260425` on `main` at commit `689f721c69f668dcb501571b77695a143946a9da`.
+
+## Outbound Wave 4 Email 1 (2026-04-28)
+
+### Request checked
+
+- Send Email 1 from the outbound sequence to 10 new French SME decision-makers.
+- Avoid all duplicates from Waves 1, 2, and 3 before sending.
+- Log the result in `outreach/wave4_email1.json`.
+- Use `capia@nanocorp.app` as sender and commit with `outreach: wave4 email1 sent to 10 prospects`.
+
+### Findings
+
+- Read the existing `DOCS.md` in the authoritative ShiftMap repo first.
+- Existing outbound history in `/content/outbound_log.md` already contained:
+  - Wave 1 complete
+  - Wave 2 complete
+  - Wave 3 / Email 1 complete
+- To avoid hidden duplicates, also checked `nanocorp emails list --direction outbound --limit 80`.
+- Used `nanocorp prospects search` with:
+  - `--source external`
+  - `--locations France`
+  - titles `CEO,Directeur General,COO,Directeur des Operations`
+  - company size filter `11-50,51-200`
+  - sector queries around retail / services / industrie / logistique
+- External search again returned masked surnames and `email: null`, so public company pages and public search snippets were used to recover full names and reachable inboxes.
+
+### Email verification outcome
+
+- `nanocorp prospects verify-email` results during this run:
+  - success: Alexandre Stagnara / KALLISTO -> `alexandre.stagnara@kallisto.pro`
+  - null result: Maxime Broll / MINITRUCKS ROBOTICS
+  - subsequent attempts rejected with:
+    - `Insufficient credits to verify email. Current balance: 0.54 credits. Cost: 0.2 credits.`
+- Because of that NanoCorp-side blocker, the final send mix was:
+  - 1 `direct verified`
+  - 1 `public direct`
+  - 8 `public company inbox`
+
+### Action taken
+
+- Sent 10 `Wave 4 / Email 1` emails from `capia@nanocorp.app` on `2026-04-28`.
+- Used the task-provided copy with:
+  - fixed subject `Votre PME et l'IA - par ou commencer ?`
+  - first-name personalization only
+  - link `https://www.shiftmap.fr`
+  - signature `Kevin` / `ShiftMap`
+- Added `/outreach/wave4_email1.json` with name, email, company, date, role, send route, status, and NanoCorp email IDs.
+- Updated `/content/outbound_log.md` with a new `Wave 4 — Email 1 (J1) — 2026-04-28` section.
+
+### Wave 4 targets sent
+
+- Alexandre Stagnara — KALLISTO — `alexandre.stagnara@kallisto.pro` — `4326396d-69f1-4543-b9ec-2dca8bc5fe6f`
+- Maxime Broll — MINITRUCKS ROBOTICS — `contact@minitrucks-robotics.fr` — `856ec80e-6498-445c-90f6-75760d543bb8`
+- Fabien Vallet — Kromi — `kromi@kromi.fr` — `272d607f-5379-4ae4-b175-d6011b3caf68`
+- Samuel Tourne — VIA LOGISTIQUE — `stourne@3tgroup-holding.com` — `8a9813c4-0997-499f-b230-f00b9a139bca`
+- Pierre-Yves Daunas — Delta Equipement — `info@delta-equipement.fr` — `da34f2be-21f4-4dca-8edc-26f06191ff92`
+- Axel Braun — ROTOLOK FRANCE — `contacts@rotolok.fr` — `d038a4a6-d297-4744-92f5-adcfe0c2cebb`
+- Martin Link — Inter Link SAS — `info@interlink-sa.com` — `ca220c7c-90d7-4bd8-91d8-268e6885b65d`
+- Clement Felisa — MyCocagne — `contact@cocagne.fr` — `a880c847-fb2e-476d-9813-a48c12885cac`
+- Loic Vanderschooten — Lonestone — `contact@lonestone.io` — `272bc91b-451b-42f6-83de-70c9c79290ce`
+- Yoann Forge — BIOXIS Pharmaceuticals — `press@bioxis.com` — `5e8a2901-f215-46a8-b0b4-6608a7f5a493`
 - In this target repo, the relevant existing files are:
   - `/app/onboarding/page.tsx`
   - `/app/onboarding/OnboardingForm.tsx`

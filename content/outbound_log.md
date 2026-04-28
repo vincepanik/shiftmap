@@ -105,6 +105,21 @@
 | 2026-04-27 | Melanie Huynh-Utzmann | HOLIDERMIE | CEO / Directrice Générale | commercial@holidermie.com | Wave 3 / Email 1 | public company inbox | sent | d19559d6-21e5-4e6c-a342-b6163a611c45 |
 | 2026-04-27 | Virginie Decroix | Buisard Distribution | Directrice Générale / CEO | servicecommercial@buisard-distri.fr | Wave 3 / Email 1 | public company inbox | sent | 459b3cc4-4820-434f-8ba8-15c8bbfeadb7 |
 
+## Wave 4 — Email 1 (J1) — 2026-04-28
+
+| Date (UTC) | Prospect | Company | Role targeted | Email used | Email # | Send type | Status | Email ID |
+|---|---|---|---|---|---|---|---|---|
+| 2026-04-28 | Alexandre Stagnara | KALLISTO | CEO / Directeur General | alexandre.stagnara@kallisto.pro | Wave 4 / Email 1 | direct verified | sent | 4326396d-69f1-4543-b9ec-2dca8bc5fe6f |
+| 2026-04-28 | Maxime Broll | MINITRUCKS ROBOTICS | COO / Directeur des Operations | contact@minitrucks-robotics.fr | Wave 4 / Email 1 | public company inbox | sent | 856ec80e-6498-445c-90f6-75760d543bb8 |
+| 2026-04-28 | Fabien Vallet | Kromi | COO / Directeur des Operations | kromi@kromi.fr | Wave 4 / Email 1 | public company inbox | sent | 272d607f-5379-4ae4-b175-d6011b3caf68 |
+| 2026-04-28 | Samuel Tourne | VIA LOGISTIQUE | Directeur des Operations Logistique | stourne@3tgroup-holding.com | Wave 4 / Email 1 | public direct | sent | 8a9813c4-0997-499f-b230-f00b9a139bca |
+| 2026-04-28 | Pierre-Yves Daunas | Delta Equipement | COO / Directeur des Operations | info@delta-equipement.fr | Wave 4 / Email 1 | public company inbox | sent | da34f2be-21f4-4dca-8edc-26f06191ff92 |
+| 2026-04-28 | Axel Braun | ROTOLOK FRANCE | CEO / Directeur General | contacts@rotolok.fr | Wave 4 / Email 1 | public company inbox | sent | d038a4a6-d297-4744-92f5-adcfe0c2cebb |
+| 2026-04-28 | Martin Link | Inter Link SAS | CEO / Directeur General | info@interlink-sa.com | Wave 4 / Email 1 | public company inbox | sent | ca220c7c-90d7-4bd8-91d8-268e6885b65d |
+| 2026-04-28 | Clement Felisa | MyCocagne | COO / Directeur des Operations | contact@cocagne.fr | Wave 4 / Email 1 | public company inbox | sent | a880c847-fb2e-476d-9813-a48c12885cac |
+| 2026-04-28 | Loic Vanderschooten | Lonestone | COO / Directeur des Operations | contact@lonestone.io | Wave 4 / Email 1 | public company inbox | sent | 272bc91b-451b-42f6-83de-70c9c79290ce |
+| 2026-04-28 | Yoann Forge | BIOXIS Pharmaceuticals | COO / Directeur des Operations | press@bioxis.com | Wave 4 / Email 1 | public company inbox | sent | 5e8a2901-f215-46a8-b0b4-6608a7f5a493 |
+
 ## Notes
 
 - Email 1 was personalized with first name, company name, and sector.
@@ -125,3 +140,6 @@
 - Wave 3 / Email 1 was sent on `2026-04-27` to 10 new French prospects distinct from Waves 1 and 2.
 - Wave 3 used first-name and sector personalization, kept the body under 150 words, linked to `https://shiftmap.fr`, and used the signature `L'équipe ShiftMap`.
 - Wave 3 mixed `direct verified`, `public direct`, and `public company inbox` routes because `nanocorp prospects verify-email` hit the platform limit of 5 verifications per hour during the run.
+- Wave 4 / Email 1 was sent on `2026-04-28` to 10 new French prospects distinct from Waves 1, 2, and 3.
+- Wave 4 used the task-provided subject `Votre PME et l'IA - par ou commencer ?`, first-name personalization only, linked to `https://www.shiftmap.fr`, and used the signature `Kevin / ShiftMap`.
+- Wave 4 mixed `direct verified`, `public direct`, and `public company inbox` routes because `nanocorp prospects verify-email` started rejecting additional lookups during the run with an `Insufficient credits` error after the first successful verification.

@@ -1,0 +1,102 @@
+[
+  {
+    "name": "Alexandre Stagnara",
+    "email": "alexandre.stagnara@kallisto.pro",
+    "company": "KALLISTO",
+    "role": "CEO / Directeur General",
+    "send_type": "direct verified",
+    "date": "2026-04-28",
+    "email_id": "4326396d-69f1-4543-b9ec-2dca8bc5fe6f",
+    "status": "sent"
+  },
+  {
+    "name": "Maxime Broll",
+    "email": "contact@minitrucks-robotics.fr",
+    "company": "MINITRUCKS ROBOTICS",
+    "role": "COO / Directeur des Operations",
+    "send_type": "public company inbox",
+    "date": "2026-04-28",
+    "email_id": "856ec80e-6498-445c-90f6-75760d543bb8",
+    "status": "sent"
+  },
+  {
+    "name": "Fabien Vallet",
+    "email": "kromi@kromi.fr",
+    "company": "Kromi",
+    "role": "COO / Directeur des Operations",
+    "send_type": "public company inbox",
+    "date": "2026-04-28",
+    "email_id": "272d607f-5379-4ae4-b175-d6011b3caf68",
+    "status": "sent"
+  },
+  {
+    "name": "Samuel Tourne",
+    "email": "stourne@3tgroup-holding.com",
+    "company": "VIA LOGISTIQUE",
+    "role": "Directeur des Operations Logistique",
+    "send_type": "public direct",
+    "date": "2026-04-28",
+    "email_id": "8a9813c4-0997-499f-b230-f00b9a139bca",
+    "status": "sent"
+  },
+  {
+    "name": "Pierre-Yves Daunas",
+    "email": "info@delta-equipement.fr",
+    "company": "Delta Equipement",
+    "role": "COO / Directeur des Operations",
+    "send_type": "public company inbox",
+    "date": "2026-04-28",
+    "email_id": "da34f2be-21f4-4dca-8edc-26f06191ff92",
+    "status": "sent"
+  },
+  {
+    "name": "Axel Braun",
+    "email": "contacts@rotolok.fr",
+    "company": "ROTOLOK FRANCE",
+    "role": "CEO / Directeur General",
+    "send_type": "public company inbox",
+    "date": "2026-04-28",
+    "email_id": "d038a4a6-d297-4744-92f5-adcfe0c2cebb",
+    "status": "sent"
+  },
+  {
+    "name": "Martin Link",
+    "email": "info@interlink-sa.com",
+    "company": "Inter Link SAS",
+    "role": "CEO / Directeur General",
+    "send_type": "public company inbox",
+    "date": "2026-04-28",
+    "email_id": "ca220c7c-90d7-4bd8-91d8-268e6885b65d",
+    "status": "sent"
+  },
+  {
+    "name": "Clement Felisa",
+    "email": "contact@cocagne.fr",
+    "company": "MyCocagne",
+    "role": "COO / Directeur des Operations",
+    "send_type": "public company inbox",
+    "date": "2026-04-28",
+    "email_id": "a880c847-fb2e-476d-9813-a48c12885cac",
+    "status": "sent"
+  },
+  {
+    "name": "Loic Vanderschooten",
+    "email": "contact@lonestone.io",
+    "company": "Lonestone",
+    "role": "COO / Directeur des Operations",
+    "send_type": "public company inbox",
+    "date": "2026-04-28",
+    "email_id": "272bc91b-451b-42f6-83de-70c9c79290ce",
+    "status": "sent"
+  },
+  {
+    "name": "Yoann Forge",
+    "email": "press@bioxis.com",
+    "company": "BIOXIS Pharmaceuticals",
+    "role": "COO / Directeur des Operations",
+    "send_type": "public company inbox",
+    "date": "2026-04-28",
+    "email_id": "5e8a2901-f215-46a8-b0b4-6608a7f5a493",
+    "status": "sent"
+  }
+]
