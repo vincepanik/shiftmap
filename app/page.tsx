@@ -312,7 +312,7 @@ export default function Home() {
           </div>
 
           <div className="report-preview-cta fade-up">
-            <a href="https://buy.stripe.com/eVq00k3HeaH536qcsXeOB35" className="btn btn-primary" target="_blank" rel="noopener noreferrer">
+            <a href="https://buy.stripe.com/00w00lccefQi0Ce6rl5wI00" className="btn btn-primary" target="_blank" rel="noopener noreferrer">
               Obtenir mon rapport maintenant
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
             </a>
