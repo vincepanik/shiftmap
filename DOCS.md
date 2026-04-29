@@ -1,5 +1,47 @@
 # ShiftMap / CapIA — Project Documentation
 
+## Outbound Wave 4 Email 2 (J+4 follow-up) (2026-04-29)
+
+### Request checked
+
+- Send the second follow-up email to the 10 prospects already logged in `outreach/wave4_email1.json`.
+- Use `capia@nanocorp.app` as sender, the fixed subject `Re: Votre PME et l'IA — une question rapide`, and the provided body copy.
+- Log the send in `outreach/wave4_email2.json`, then commit and push `main`.
+
+### Findings
+
+- Read the existing `DOCS.md` in the authoritative ShiftMap repo first.
+- The authoritative export repo for this task is `vincepanik/shiftmap`, cloned locally to `/tmp/shiftmap-wave4`.
+- `outreach/wave4_email1.json` contained exactly 10 Wave 4 recipients and the NanoCorp `email_id` values needed for threaded replies.
+- `outreach/wave4_email2.json` did not exist before this run.
+- `nanocorp emails send --help` confirmed support for `--reply-to`, so the follow-up could be sent in-thread against each Wave 4 / Email 1 message.
+- The logged Wave 4 / Email 1 send date is `2026-04-28`, while this requested `J+4` follow-up was executed on `2026-04-29`; the date mismatch was preserved and documented rather than blocking the task.
+
+### Action taken
+
+- Sent 10 `Wave 4 / Email 2` follow-ups from `capia@nanocorp.app` on `2026-04-29`.
+- Used the task-provided copy with:
+  - first-name personalization only
+  - subject `Re: Votre PME et l'IA — une question rapide`
+  - link `https://www.shiftmap.fr`
+  - signature `Kevin / ShiftMap`
+- Sent all 10 emails as threaded replies using the corresponding Wave 4 / Email 1 `email_id` values as `--reply-to`.
+- Added `/tmp/shiftmap-wave4/outreach/wave4_email2.json` with name, email, company, date, role, reply target, status, subject, and NanoCorp email IDs.
+- Updated `/tmp/shiftmap-wave4/content/outbound_log.md` with a new `Wave 4 — Email 2 (J+4) — 2026-04-29` section and note about the J+4/date mismatch.
+
+### Wave 4 follow-up targets sent
+
+- Alexandre Stagnara — KALLISTO — `alexandre.stagnara@kallisto.pro` — `da4b12ca-09a1-48e1-b4c6-3a51d838e222`
+- Maxime Broll — MINITRUCKS ROBOTICS — `contact@minitrucks-robotics.fr` — `0aa2f3cd-bcf0-46d7-a18d-05e17fd4cfe0`
+- Fabien Vallet — Kromi — `kromi@kromi.fr` — `edf53b59-a1d3-4a3b-8dd5-eca197f781df`
+- Samuel Tourne — VIA LOGISTIQUE — `stourne@3tgroup-holding.com` — `0fc7df1b-f86b-4e75-93eb-bf6afcbba374`
+- Pierre-Yves Daunas — Delta Equipement — `info@delta-equipement.fr` — `886d15f9-68f5-41f5-8d4b-239e7f739fff`
+- Axel Braun — ROTOLOK FRANCE — `contacts@rotolok.fr` — `c30d380a-fa62-4084-8e85-30d7ecbc8059`
+- Martin Link — Inter Link SAS — `info@interlink-sa.com` — `0a4bcfa5-a67f-48e8-9b50-8ecc0fcacad2`
+- Clement Felisa — MyCocagne — `contact@cocagne.fr` — `fa549081-cd29-4e25-83e7-fe36dbd4dc13`
+- Loic Vanderschooten — Lonestone — `contact@lonestone.io` — `7b75f1c6-49fc-483b-9657-2ca4dd6a3683`
+- Yoann Forge — BIOXIS Pharmaceuticals — `press@bioxis.com` — `5b6274a7-7a76-4760-ad18-6b1da742cd4e`
+
 ## Landing Page FAQ + Final CTA Update (2026-04-27)
 
 ### Exploration findings
