@@ -32,6 +32,7 @@ const faqItems = [
 
 export default function Home() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isLaunchBannerVisible, setIsLaunchBannerVisible] = useState(true);
   const handleMobileMenuClose = () => setIsMobileMenuOpen(false);
   const reportPreviewSections = [
     {
@@ -57,35 +58,47 @@ export default function Home() {
   ] as const;
 
   useEffect(() => {
-    // Nav scroll effect
     const nav = document.getElementById('main-nav');
-    if (nav) {
-      const handleScroll = () => {
-        nav.classList.toggle('scrolled', window.scrollY > 30);
-      };
-      window.addEventListener('scroll', handleScroll, { passive: true });
+    const handleScroll = () => {
+      const shouldShowLaunchBanner = window.scrollY <= 300;
 
-      // Intersection Observer for fade-up
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(e => {
-          if (e.isIntersecting) {
-            e.target.classList.add('visible');
-            observer.unobserve(e.target);
-          }
-        });
-      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      nav?.classList.toggle('scrolled', window.scrollY > 30);
+      setIsLaunchBannerVisible(shouldShowLaunchBanner);
+      document.documentElement.style.setProperty(
+        '--launch-banner-offset',
+        shouldShowLaunchBanner ? '40px' : '0px',
+      );
+    };
 
-      document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    window.addEventListener('scroll', handleScroll, { passive: true });
 
-      return () => {
-        window.removeEventListener('scroll', handleScroll);
-        observer.disconnect();
-      };
-    }
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    handleScroll();
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      observer.disconnect();
+      document.documentElement.style.removeProperty('--launch-banner-offset');
+    };
   }, []);
 
   return (
     <>
+      <div className={`launch-banner${isLaunchBannerVisible ? '' : ' launch-banner-hidden'}`}>
+        <p className="launch-banner-text">
+          🚀 Offre de lancement — Feuille de route IA personnalisée en 24h · Starter dès 97€
+        </p>
+      </div>
+
       {/* NAV */}
       <nav id="main-nav">
         <div className="nav-inner">
@@ -369,8 +382,9 @@ export default function Home() {
               </ul>
 
               <a href="https://buy.stripe.com/00w00lccefQi0Ce6rl5wI00" className="pricing-cta" target="_blank" rel="noopener noreferrer">
-                Commencer avec Starter →
+                Démarrer Starter →
               </a>
+              <p className="pricing-trust">🔒 Paiement sécurisé · Remboursement garanti 7 jours · Livraison en 24h</p>
             </div>
 
             {/* Pro (featured) */}
@@ -411,8 +425,9 @@ export default function Home() {
               </ul>
 
               <a href="https://buy.stripe.com/14AdRba467jM5Wy8zt5wI01" className="pricing-cta" target="_blank" rel="noopener noreferrer">
-                Commencer avec Pro →
+                Démarrer Pro →
               </a>
+              <p className="pricing-trust">🔒 Paiement sécurisé · Remboursement garanti 7 jours · Livraison en 24h</p>
             </div>
 
             {/* AI Advisor */}
@@ -616,6 +631,75 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      <style jsx global>{`
+        :root {
+          --launch-banner-offset: 40px;
+        }
+
+        #main-nav {
+          top: var(--launch-banner-offset, 0px);
+          transition: top 0.25s ease, background 0.3s, box-shadow 0.3s;
+        }
+
+        #hero {
+          padding-top: calc(68px + var(--launch-banner-offset, 0px));
+        }
+
+        .launch-banner {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          z-index: 110;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 40px;
+          padding: 8px 16px;
+          background: #1e293b;
+          color: #ffffff;
+          text-align: center;
+          transition: transform 0.25s ease, opacity 0.25s ease;
+        }
+
+        .launch-banner-hidden {
+          opacity: 0;
+          pointer-events: none;
+          transform: translateY(-100%);
+        }
+
+        .launch-banner-text {
+          max-width: 960px;
+          font-size: clamp(11px, 2vw, 13px);
+          font-weight: 500;
+          letter-spacing: 0.01em;
+          line-height: 1.2;
+        }
+
+        .pricing-trust {
+          margin-top: 12px;
+          font-size: 12px;
+          font-weight: 500;
+          line-height: 1.5;
+          text-align: center;
+          color: rgba(255, 255, 255, 0.72);
+        }
+
+        .pricing-card.featured .pricing-trust {
+          color: rgba(255, 255, 255, 0.9);
+        }
+
+        @media (max-width: 600px) {
+          .launch-banner {
+            padding: 7px 12px;
+          }
+
+          .pricing-trust {
+            font-size: 11.5px;
+          }
+        }
+      `}</style>
     </>
   );
 }
