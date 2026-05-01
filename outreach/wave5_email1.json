@@ -1,0 +1,112 @@
+[
+  {
+    "name": "Benoit Gervais",
+    "email": "contact@yvert.com",
+    "company": "Yvert & Tellier",
+    "role": "CEO / Chairman",
+    "send_type": "public company inbox",
+    "date": "2026-05-01",
+    "subject": "Votre PME et l’IA — une question rapide",
+    "email_id": "61f8e6d1-5f79-406c-a7d8-9004acdb3f8d",
+    "status": "sent"
+  },
+  {
+    "name": "Pascal Jehan",
+    "email": "secretariat@vetigraph.com",
+    "company": "VETIGRAPH France",
+    "role": "PDG / CEO",
+    "send_type": "public company inbox",
+    "date": "2026-05-01",
+    "subject": "Votre PME et l’IA — une question rapide",
+    "email_id": "2cbeac5c-986e-4b58-a0d0-62ff579b1a88",
+    "status": "sent"
+  },
+  {
+    "name": "Emmanuel Deret",
+    "email": "ederet@ed-trans.com",
+    "company": "ED-TRANS",
+    "role": "PDG / CEO",
+    "send_type": "public direct",
+    "date": "2026-05-01",
+    "subject": "Votre PME et l’IA — une question rapide",
+    "email_id": "7bc3d74f-e57f-439f-8ba6-6f13f8b7e777",
+    "status": "sent"
+  },
+  {
+    "name": "Frederic Chassard",
+    "email": "service.clients@beway.fr",
+    "company": "BE WAY",
+    "role": "PDG / CEO",
+    "send_type": "public company inbox",
+    "date": "2026-05-01",
+    "subject": "Votre PME et l’IA — une question rapide",
+    "email_id": "86eefe8d-fa1b-4aaf-85b1-44f6ddcb162f",
+    "status": "sent"
+  },
+  {
+    "name": "Nicolas Beaurain",
+    "email": "contact@agence-de-lenergie.com",
+    "company": "ADELEC",
+    "role": "Co-gerant / Dirigeant",
+    "send_type": "public company inbox",
+    "date": "2026-05-01",
+    "subject": "Votre PME et l’IA — une question rapide",
+    "email_id": "83c7b32a-3b19-47fe-ad8c-8f00cafeb718",
+    "status": "sent"
+  },
+  {
+    "name": "Clement Bedbeder",
+    "email": "contact@brasserie-bretagne.fr",
+    "company": "Brasserie de Bretagne",
+    "role": "PDG / CEO",
+    "send_type": "public company inbox",
+    "date": "2026-05-01",
+    "subject": "Votre PME et l’IA — une question rapide",
+    "email_id": "a9f42462-d2ce-4945-9ba1-8696e86e8219",
+    "status": "sent"
+  },
+  {
+    "name": "Romain Koller",
+    "email": "contact@koller.fr",
+    "company": "Koller",
+    "role": "PDG / CEO",
+    "send_type": "public company inbox",
+    "date": "2026-05-01",
+    "subject": "Votre PME et l’IA — une question rapide",
+    "email_id": "a6a9ead0-621d-4044-95d5-1fa57da897c9",
+    "status": "sent"
+  },
+  {
+    "name": "Alexandre Dubost",
+    "email": "contact@jeandubost.com",
+    "company": "Jean Dubost",
+    "role": "PDG / CEO",
+    "send_type": "public company inbox",
+    "date": "2026-05-01",
+    "subject": "Votre PME et l’IA — une question rapide",
+    "email_id": "e16b87da-92a8-441d-93b3-808ab1d59b68",
+    "status": "sent"
+  },
+  {
+    "name": "Julien Bouvard",
+    "email": "julien.bouvard@expelec.fr",
+    "company": "EXPELEC SA",
+    "role": "PDG / CEO",
+    "send_type": "public direct",
+    "date": "2026-05-01",
+    "subject": "Votre PME et l’IA — une question rapide",
+    "email_id": "cc8600a4-e49b-4ffc-a22e-7913e94efc83",
+    "status": "sent"
+  },
+  {
+    "name": "Laurence Baudel",
+    "email": "dl-fluoptics-marketing@getinge.com",
+    "company": "FLUOPTICS",
+    "role": "Directrice Generale",
+    "send_type": "public company inbox",
+    "date": "2026-05-01",
+    "subject": "Votre PME et l’IA — une question rapide",
+    "email_id": "c87339c8-3cdc-4581-a56f-0b2710fc191b",
+    "status": "sent"
+  }
+]

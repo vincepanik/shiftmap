@@ -1,5 +1,102 @@
 # ShiftMap / CapIA — Project Documentation
 
+## Outbound Wave 5 Email 1 Preparation (2026-05-01)
+
+### Request checked
+
+- Source 10 new French SME decision-makers (20 to 100 employees) for ShiftMap Wave 5.
+- Avoid any duplicate company/contact already used in Waves 1 to 4.
+- Send the provided Email 1 copy from `capia@nanocorp.app`.
+- Log sends in `outreach/wave5_email1.json`, commit, and push to `main`.
+
+### Exploration findings
+
+- The authoritative repo for this task is `vincepanik/shiftmap`, cloned locally to `/tmp/shiftmap-wave5`.
+- Existing outbound structured files in this repo before the task:
+  - `/tmp/shiftmap-wave5/outreach/wave4_email1.json`
+  - `/tmp/shiftmap-wave5/outreach/wave4_email2.json`
+- The canonical historical dedupe source across Waves 1 to 4 is `/tmp/shiftmap-wave5/content/outbound_log.md`.
+- The reusable outbound sequence reference is `/tmp/shiftmap-wave5/content/outbound_sequence.md`.
+- Waves 1 to 4 already cover these 40 companies and must be excluded from Wave 5:
+  - Antadis
+  - Geovelo
+  - LockSelf
+  - KOUKA
+  - Webdentiste
+  - SOMONE
+  - Aquila Data Enabler
+  - Mailinblack
+  - LineUP7
+  - Coqpit
+  - Dropteam
+  - WYZ Group
+  - YourBO
+  - Mipise
+  - Option Way
+  - Fitle
+  - Odonatech
+  - Trustpair
+  - Global SP
+  - Digicall
+  - EffiNov Nutrition
+  - Pika Édition
+  - GILAC
+  - Feed Manager
+  - MabDesign
+  - Corpoderm Healthcare Solutions
+  - ASSIA
+  - GRAAD Santé
+  - HOLIDERMIE
+  - Buisard Distribution
+  - KALLISTO
+  - MINITRUCKS ROBOTICS
+  - Kromi
+  - VIA LOGISTIQUE
+  - Delta Equipement
+  - ROTOLOK FRANCE
+  - Inter Link SAS
+  - MyCocagne
+  - Lonestone
+  - BIOXIS Pharmaceuticals
+
+### Planned execution
+
+- Source new candidates across varied sectors with NanoCorp prospect search.
+- Verify direct emails when possible, otherwise fall back to credible public company inboxes only if needed.
+- Send the provided Wave 5 Email 1 copy, then log exact send metadata in `outreach/wave5_email1.json`.
+
+### Action taken
+
+- Sourced and deduped 10 new targets against the 40 companies already present in Waves 1 to 4.
+- Sent `Wave 5 / Email 1` from `capia@nanocorp.app` on `2026-05-01` to:
+  - Benoit Gervais — Yvert & Tellier — `contact@yvert.com`
+  - Pascal Jehan — VETIGRAPH France — `secretariat@vetigraph.com`
+  - Emmanuel Deret — ED-TRANS — `ederet@ed-trans.com`
+  - Frederic Chassard — BE WAY — `service.clients@beway.fr`
+  - Nicolas Beaurain — ADELEC — `contact@agence-de-lenergie.com`
+  - Clement Bedbeder — Brasserie de Bretagne — `contact@brasserie-bretagne.fr`
+  - Romain Koller — Koller — `contact@koller.fr`
+  - Alexandre Dubost — Jean Dubost — `contact@jeandubost.com`
+  - Julien Bouvard — EXPELEC SA — `julien.bouvard@expelec.fr`
+  - Laurence Baudel — FLUOPTICS — `dl-fluoptics-marketing@getinge.com`
+- Added `/tmp/shiftmap-wave5/outreach/wave5_email1.json` with the 10 sends, send route, date, subject, status, and NanoCorp `email_id` values.
+- Updated `/tmp/shiftmap-wave5/content/outbound_log.md` with a new `Wave 5 — Email 1 (J1) — 2026-05-01` section.
+
+### Verification
+
+- All 10 `nanocorp emails send` calls returned `status: sent`.
+- Final logged `email_id` values:
+  - `61f8e6d1-5f79-406c-a7d8-9004acdb3f8d`
+  - `2cbeac5c-986e-4b58-a0d0-62ff579b1a88`
+  - `7bc3d74f-e57f-439f-8ba6-6f13f8b7e777`
+  - `86eefe8d-fa1b-4aaf-85b1-44f6ddcb162f`
+  - `83c7b32a-3b19-47fe-ad8c-8f00cafeb718`
+  - `a9f42462-d2ce-4945-9ba1-8696e86e8219`
+  - `a6a9ead0-621d-4044-95d5-1fa57da897c9`
+  - `e16b87da-92a8-441d-93b3-808ab1d59b68`
+  - `cc8600a4-e49b-4ffc-a22e-7913e94efc83`
+  - `c87339c8-3cdc-4581-a56f-0b2710fc191b`
+
 ## Landing page urgency banner + pricing trust indicators (2026-04-30)
 
 ### Request checked
