@@ -150,6 +150,21 @@
 | 2026-05-01 | Julien Bouvard | EXPELEC SA | PDG / CEO | julien.bouvard@expelec.fr | Wave 5 / Email 1 | public direct | sent | cc8600a4-e49b-4ffc-a22e-7913e94efc83 |
 | 2026-05-01 | Laurence Baudel | FLUOPTICS | Directrice Generale | dl-fluoptics-marketing@getinge.com | Wave 5 / Email 1 | public company inbox | sent | c87339c8-3cdc-4581-a56f-0b2710fc191b |
 
+## Wave 4 — Email 3 (J+8) — 2026-05-02
+
+| Date (UTC) | Prospect | Company | Role targeted | Email used | Email # | Send type | Status | Reply-to | Email ID |
+|---|---|---|---|---|---|---|---|---|---|
+| 2026-05-02 | Alexandre Stagnara | KALLISTO | CEO / Directeur General | alexandre.stagnara@kallisto.pro | Wave 4 / Email 3 | thread reply | sent | da4b12ca-09a1-48e1-b4c6-3a51d838e222 | c06bc04f-b20e-4a40-9ea3-e3eb9cc8f2cd |
+| 2026-05-02 | Maxime Broll | MINITRUCKS ROBOTICS | COO / Directeur des Operations | contact@minitrucks-robotics.fr | Wave 4 / Email 3 | thread reply | sent | 0aa2f3cd-bcf0-46d7-a18d-05e17fd4cfe0 | 5242b42e-f35e-494a-84ac-061e51a3befd |
+| 2026-05-02 | Fabien Vallet | Kromi | COO / Directeur des Operations | kromi@kromi.fr | Wave 4 / Email 3 | thread reply | sent | edf53b59-a1d3-4a3b-8dd5-eca197f781df | e8918875-e7ce-4a27-9595-b7704aa76f7b |
+| 2026-05-02 | Samuel Tourne | VIA LOGISTIQUE | Directeur des Operations Logistique | stourne@3tgroup-holding.com | Wave 4 / Email 3 | thread reply | sent | 0fc7df1b-f86b-4e75-93eb-bf6afcbba374 | 4d042e08-2e61-4d55-90f6-b0598ef7af7d |
+| 2026-05-02 | Pierre-Yves Daunas | Delta Equipement | COO / Directeur des Operations | info@delta-equipement.fr | Wave 4 / Email 3 | thread reply | sent | 886d15f9-68f5-41f5-8d4b-239e7f739fff | 04644594-c736-4b9e-9620-ac6668cd579d |
+| 2026-05-02 | Axel Braun | ROTOLOK FRANCE | CEO / Directeur General | contacts@rotolok.fr | Wave 4 / Email 3 | thread reply | sent | c30d380a-fa62-4084-8e85-30d7ecbc8059 | 8bb86561-28c1-402c-95c1-d25449837a93 |
+| 2026-05-02 | Martin Link | Inter Link SAS | CEO / Directeur General | info@interlink-sa.com | Wave 4 / Email 3 | thread reply | sent | 0a4bcfa5-a67f-48e8-9b50-8ecc0fcacad2 | ee27d6ee-661f-4697-b428-77af301dcd4f |
+| 2026-05-02 | Clement Felisa | MyCocagne | COO / Directeur des Operations | contact@cocagne.fr | Wave 4 / Email 3 | thread reply | sent | fa549081-cd29-4e25-83e7-fe36dbd4dc13 | b47f1ea1-c309-4fa6-b45b-46a52249f562 |
+| 2026-05-02 | Loic Vanderschooten | Lonestone | COO / Directeur des Operations | contact@lonestone.io | Wave 4 / Email 3 | thread reply | sent | 7b75f1c6-49fc-483b-9657-2ca4dd6a3683 | 2803abdf-0ba3-4dc0-9c39-5b4fa8d9da4f |
+| 2026-05-02 | Yoann Forge | BIOXIS Pharmaceuticals | COO / Directeur des Operations | press@bioxis.com | Wave 4 / Email 3 | thread reply | sent | 5b6274a7-7a76-4760-ad18-6b1da742cd4e | 1c316ae6-1192-41a2-bde3-bc4c80a3ee87 |
+
 ## Wave 5 — Email 2 (J+4) — 2026-05-02
 
 | Date (UTC) | Prospect | Company | Role targeted | Email used | Email # | Send type | Status | Reply-to | Email ID |
@@ -191,6 +206,9 @@
 - Wave 4 / Email 2 was sent on `2026-04-29` as a threaded reply to the corresponding `Wave 4 / Email 1` messages for the same 10 prospects.
 - Wave 4 / Email 2 used the subject `Re: Votre PME et l'IA — une question rapide`, the `https://www.shiftmap.fr` link, and the signature `Kevin / ShiftMap`.
 - The requested label was `J+4`, but the source file `outreach/wave4_email1.json` is dated `2026-04-28`, so this follow-up was executed on `2026-04-29` relative to that logged send date.
+- Wave 4 / Email 3 was sent on `2026-05-02` as a threaded reply to the corresponding `Wave 4 / Email 2` messages for the same 10 prospects.
+- Wave 4 / Email 3 used the task-provided subject `Dernier message — ShiftMap`, the `https://www.shiftmap.fr` link, and the signature `L'équipe ShiftMap`.
+- The requested label was `J+8`, but the source files `outreach/wave4_email1.json` and `outreach/wave4_email2.json` are dated `2026-04-28` and `2026-04-29`, so this follow-up was executed on `2026-05-02` relative to those logged send dates.
 - Wave 5 / Email 1 was sent on `2026-05-01` to 10 new French prospects distinct from Waves 1 to 4.
 - Wave 5 used the task-provided subject `Votre PME et l’IA — une question rapide`, first-name and company personalization in the body, linked to `https://www.shiftmap.fr`, and used the signature `L’équipe ShiftMap`.
 - Wave 5 used a mix of `public direct` and `public company inbox` routes based on publicly reachable addresses available during sourcing.

@@ -1,5 +1,56 @@
 # ShiftMap / CapIA — Project Documentation
 
+## Outbound Wave 4 Email 3 (J+8 final follow-up) (2026-05-02)
+
+### Request checked
+
+- Send the third and final follow-up email to the 10 prospects already logged in `outreach/wave4_email1.json` and `outreach/wave4_email2.json`.
+- Use `capia@nanocorp.app` as sender, the fixed subject `Dernier message — ShiftMap`, and the task-provided body copy.
+- Log the send in `outreach/wave4_email3.json`, then commit and push `main`.
+
+### Findings
+
+- Read the existing `DOCS.md` in the authoritative ShiftMap repo first.
+- The authoritative export repo for this task is `vincepanik/shiftmap`, cloned locally to `/tmp/shiftmap-wave4.67HPOv`.
+- `outreach/wave4_email1.json` and `outreach/wave4_email2.json` contained exactly the same 10 Wave 4 recipients, with the Wave 4 / Email 2 `email_id` values needed to send the final follow-up as threaded replies.
+- `content/outbound_sequence.md` and earlier documented Wave 1 / Wave 2 Email 3 runs both show the established convention for Email 3 is `thread reply` against the prior Email 2 message.
+- `outreach/wave4_email3.json` did not exist before this run.
+- The requested label was `J+8`, but the logged source dates are:
+  - Wave 4 / Email 1: `2026-04-28`
+  - Wave 4 / Email 2: `2026-04-29`
+  - this requested final follow-up was executed on `2026-05-02`, so the date mismatch was preserved and documented rather than blocking the task.
+
+### Action taken
+
+- Sent 10 `Wave 4 / Email 3` final follow-ups from `capia@nanocorp.app` on `2026-05-02`.
+- Used the task-provided copy with:
+  - first-name personalization
+  - company-name personalization
+  - subject `Dernier message — ShiftMap`
+  - link `https://www.shiftmap.fr`
+  - signature `L'équipe ShiftMap`
+- Sent all 10 emails as threaded replies using the corresponding Wave 4 / Email 2 `email_id` values as `--reply-to`.
+- Added `/tmp/shiftmap-wave4.67HPOv/outreach/wave4_email3.json` with name, email, company, role, date, reply target, status, subject, and NanoCorp email IDs.
+- Updated `/tmp/shiftmap-wave4.67HPOv/content/outbound_log.md` with a new `Wave 4 — Email 3 (J+8) — 2026-05-02` section plus note entries covering the subject, signature, link, and J+8/date mismatch.
+
+### Wave 4 final follow-up targets sent
+
+- Alexandre Stagnara — KALLISTO — `alexandre.stagnara@kallisto.pro` — `c06bc04f-b20e-4a40-9ea3-e3eb9cc8f2cd`
+- Maxime Broll — MINITRUCKS ROBOTICS — `contact@minitrucks-robotics.fr` — `5242b42e-f35e-494a-84ac-061e51a3befd`
+- Fabien Vallet — Kromi — `kromi@kromi.fr` — `e8918875-e7ce-4a27-9595-b7704aa76f7b`
+- Samuel Tourne — VIA LOGISTIQUE — `stourne@3tgroup-holding.com` — `4d042e08-2e61-4d55-90f6-b0598ef7af7d`
+- Pierre-Yves Daunas — Delta Equipement — `info@delta-equipement.fr` — `04644594-c736-4b9e-9620-ac6668cd579d`
+- Axel Braun — ROTOLOK FRANCE — `contacts@rotolok.fr` — `8bb86561-28c1-402c-95c1-d25449837a93`
+- Martin Link — Inter Link SAS — `info@interlink-sa.com` — `ee27d6ee-661f-4697-b428-77af301dcd4f`
+- Clement Felisa — MyCocagne — `contact@cocagne.fr` — `b47f1ea1-c309-4fa6-b45b-46a52249f562`
+- Loic Vanderschooten — Lonestone — `contact@lonestone.io` — `2803abdf-0ba3-4dc0-9c39-5b4fa8d9da4f`
+- Yoann Forge — BIOXIS Pharmaceuticals — `press@bioxis.com` — `1c316ae6-1192-41a2-bde3-bc4c80a3ee87`
+
+### Verification
+
+- `nanocorp emails send` returned `status: sent` for all 10 batch sends and exposed the final sent `email_id` values directly in the response.
+- `nanocorp emails list --direction outbound --limit 20` showed outbound messages from `capia@nanocorp.app` with the expected subject `Dernier message — ShiftMap`.
+
 ## Outbound Wave 5 Email 2 (J+4 follow-up) (2026-05-02)
 
 ### Request checked
