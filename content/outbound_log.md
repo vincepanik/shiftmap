@@ -150,6 +150,21 @@
 | 2026-05-01 | Julien Bouvard | EXPELEC SA | PDG / CEO | julien.bouvard@expelec.fr | Wave 5 / Email 1 | public direct | sent | cc8600a4-e49b-4ffc-a22e-7913e94efc83 |
 | 2026-05-01 | Laurence Baudel | FLUOPTICS | Directrice Generale | dl-fluoptics-marketing@getinge.com | Wave 5 / Email 1 | public company inbox | sent | c87339c8-3cdc-4581-a56f-0b2710fc191b |
 
+## Wave 5 — Email 2 (J+4) — 2026-05-02
+
+| Date (UTC) | Prospect | Company | Role targeted | Email used | Email # | Send type | Status | Reply-to | Email ID |
+|---|---|---|---|---|---|---|---|---|---|
+| 2026-05-02 | Benoit Gervais | Yvert & Tellier | CEO / Chairman | contact@yvert.com | Wave 5 / Email 2 | thread reply | sent | 61f8e6d1-5f79-406c-a7d8-9004acdb3f8d | dad228b4-5a13-4e95-98e4-c07165cca598 |
+| 2026-05-02 | Pascal Jehan | VETIGRAPH France | PDG / CEO | secretariat@vetigraph.com | Wave 5 / Email 2 | thread reply | sent | 2cbeac5c-986e-4b58-a0d0-62ff579b1a88 | 47ff16bb-cd5a-4ea4-98a8-5cfd031ec450 |
+| 2026-05-02 | Emmanuel Deret | ED-TRANS | PDG / CEO | ederet@ed-trans.com | Wave 5 / Email 2 | thread reply | sent | 7bc3d74f-e57f-439f-8ba6-6f13f8b7e777 | 692da34e-af64-4c77-923a-d3be1781bc76 |
+| 2026-05-02 | Frederic Chassard | BE WAY | PDG / CEO | service.clients@beway.fr | Wave 5 / Email 2 | thread reply | sent | 86eefe8d-fa1b-4aaf-85b1-44f6ddcb162f | b9c9866c-03c4-4d74-a65d-1cb1e4f1b401 |
+| 2026-05-02 | Nicolas Beaurain | ADELEC | Co-gerant / Dirigeant | contact@agence-de-lenergie.com | Wave 5 / Email 2 | thread reply | sent | 83c7b32a-3b19-47fe-ad8c-8f00cafeb718 | bbe93e6e-57a6-43ac-b97c-6cf4c54f4bef |
+| 2026-05-02 | Clement Bedbeder | Brasserie de Bretagne | PDG / CEO | contact@brasserie-bretagne.fr | Wave 5 / Email 2 | thread reply | sent | a9f42462-d2ce-4945-9ba1-8696e86e8219 | b369dc1a-a8c1-4170-9526-3677516c0ae8 |
+| 2026-05-02 | Romain Koller | Koller | PDG / CEO | contact@koller.fr | Wave 5 / Email 2 | thread reply | sent | a6a9ead0-621d-4044-95d5-1fa57da897c9 | 786d3e41-ea20-48c4-b9d7-efcefd95c689 |
+| 2026-05-02 | Alexandre Dubost | Jean Dubost | PDG / CEO | contact@jeandubost.com | Wave 5 / Email 2 | thread reply | sent | e16b87da-92a8-441d-93b3-808ab1d59b68 | a9d3cc1c-d59f-4036-aa9d-277c38531f1d |
+| 2026-05-02 | Julien Bouvard | EXPELEC SA | PDG / CEO | julien.bouvard@expelec.fr | Wave 5 / Email 2 | thread reply | sent | cc8600a4-e49b-4ffc-a22e-7913e94efc83 | 67aa5426-66a7-478a-a389-fc21799e4a41 |
+| 2026-05-02 | Laurence Baudel | FLUOPTICS | Directrice Generale | dl-fluoptics-marketing@getinge.com | Wave 5 / Email 2 | thread reply | sent | c87339c8-3cdc-4581-a56f-0b2710fc191b | 6e64edb3-7494-46a3-ad24-2d41e98a2d89 |
+
 ## Notes
 
 - Email 1 was personalized with first name, company name, and sector.
@@ -179,3 +194,6 @@
 - Wave 5 / Email 1 was sent on `2026-05-01` to 10 new French prospects distinct from Waves 1 to 4.
 - Wave 5 used the task-provided subject `Votre PME et l’IA — une question rapide`, first-name and company personalization in the body, linked to `https://www.shiftmap.fr`, and used the signature `L’équipe ShiftMap`.
 - Wave 5 used a mix of `public direct` and `public company inbox` routes based on publicly reachable addresses available during sourcing.
+- Wave 5 / Email 2 was sent on `2026-05-02` as a threaded reply to the corresponding `Wave 5 / Email 1` messages for the same 10 prospects.
+- Wave 5 / Email 2 used the task-provided subject `Re: Votre PME et l'IA — une question rapide`, the `https://www.shiftmap.fr` link, and the signature `L'équipe ShiftMap`.
+- The requested label was `J+4`, but the source file `outreach/wave5_email1.json` is dated `2026-05-01`, so this follow-up was executed on `2026-05-02` relative to that logged send date.

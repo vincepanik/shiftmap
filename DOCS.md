@@ -1,5 +1,53 @@
 # ShiftMap / CapIA — Project Documentation
 
+## Outbound Wave 5 Email 2 (J+4 follow-up) (2026-05-02)
+
+### Request checked
+
+- Send the second follow-up email to the 10 prospects already logged in `outreach/wave5_email1.json`.
+- Use `capia@nanocorp.app` as sender, the fixed subject `Re: Votre PME et l'IA — une question rapide`, and the provided body copy.
+- Log the send in `outreach/wave5_email2.json`, then commit and push `main`.
+
+### Findings
+
+- Read the existing `DOCS.md` in the authoritative ShiftMap repo first.
+- The authoritative export repo for this task is `vincepanik/shiftmap`, cloned locally to `/tmp/shiftmap-wave5.K2hwiR`.
+- `outreach/wave5_email1.json` contained exactly 10 Wave 5 recipients and the NanoCorp `email_id` values needed for threaded replies.
+- `outreach/wave5_email2.json` did not exist before this run.
+- `nanocorp emails send --help` confirmed support for `--reply-to`, so the follow-up could be sent in-thread against each Wave 5 / Email 1 message.
+- The logged Wave 5 / Email 1 send date is `2026-05-01`, while this requested `J+4` follow-up was executed on `2026-05-02`; the date mismatch was preserved and documented rather than blocking the task.
+- NanoCorp `emails send` completed successfully for the batch, but the command response did not expose the sent message ID directly in the fields first expected, so the final `email_id` values were reconstructed and confirmed from `nanocorp emails list --direction outbound --limit 20`.
+
+### Action taken
+
+- Sent 10 `Wave 5 / Email 2` follow-ups from `capia@nanocorp.app` on `2026-05-02`.
+- Used the task-provided copy with:
+  - first-name personalization only
+  - subject `Re: Votre PME et l'IA — une question rapide`
+  - link `https://www.shiftmap.fr`
+  - signature `L'équipe ShiftMap`
+- Sent all 10 emails as threaded replies using the corresponding Wave 5 / Email 1 `email_id` values as `--reply-to`.
+- Added `/tmp/shiftmap-wave5.K2hwiR/outreach/wave5_email2.json` with name, email, company, role, date, reply target, status, subject, and NanoCorp email IDs.
+- Updated `/tmp/shiftmap-wave5.K2hwiR/content/outbound_log.md` with a new `Wave 5 — Email 2 (J+4) — 2026-05-02` section and note about the J+4/date mismatch.
+
+### Wave 5 follow-up targets sent
+
+- Benoit Gervais — Yvert & Tellier — `contact@yvert.com` — `dad228b4-5a13-4e95-98e4-c07165cca598`
+- Pascal Jehan — VETIGRAPH France — `secretariat@vetigraph.com` — `47ff16bb-cd5a-4ea4-98a8-5cfd031ec450`
+- Emmanuel Deret — ED-TRANS — `ederet@ed-trans.com` — `692da34e-af64-4c77-923a-d3be1781bc76`
+- Frederic Chassard — BE WAY — `service.clients@beway.fr` — `b9c9866c-03c4-4d74-a65d-1cb1e4f1b401`
+- Nicolas Beaurain — ADELEC — `contact@agence-de-lenergie.com` — `bbe93e6e-57a6-43ac-b97c-6cf4c54f4bef`
+- Clement Bedbeder — Brasserie de Bretagne — `contact@brasserie-bretagne.fr` — `b369dc1a-a8c1-4170-9526-3677516c0ae8`
+- Romain Koller — Koller — `contact@koller.fr` — `786d3e41-ea20-48c4-b9d7-efcefd95c689`
+- Alexandre Dubost — Jean Dubost — `contact@jeandubost.com` — `a9d3cc1c-d59f-4036-aa9d-277c38531f1d`
+- Julien Bouvard — EXPELEC SA — `julien.bouvard@expelec.fr` — `67aa5426-66a7-478a-a389-fc21799e4a41`
+- Laurence Baudel — FLUOPTICS — `dl-fluoptics-marketing@getinge.com` — `6e64edb3-7494-46a3-ad24-2d41e98a2d89`
+
+### Verification
+
+- `nanocorp emails list --direction outbound --limit 20` showed all 10 new outbound messages from `capia@nanocorp.app` with the expected subject on `2026-05-02`.
+- All 10 logged `email_id` values in `outreach/wave5_email2.json` were matched from that outbound mailbox listing by recipient address.
+
 ## Outbound Wave 5 Email 1 Preparation (2026-05-01)
 
 ### Request checked
