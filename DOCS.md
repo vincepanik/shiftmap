@@ -1,5 +1,59 @@
 # ShiftMap / CapIA — Project Documentation
 
+## Outbound Wave 5 Email 3 (J+8 final follow-up) (2026-05-03)
+
+### Request checked
+
+- Send the third and final follow-up email to the 10 prospects already logged in `outreach/wave5_email1.json` and `outreach/wave5_email2.json`.
+- Use `capia@nanocorp.app` as sender, the fixed subject `Dernier message — ShiftMap`, and the task-provided body copy.
+- Log the send in `outreach/wave5_email3.json`, then commit and push `main`.
+
+### Findings
+
+- Read the existing `DOCS.md` in the authoritative ShiftMap repo first.
+- The authoritative export repo for this task is `vincepanik/shiftmap`, cloned locally to `/home/worker/shiftmap`.
+- `outreach/wave5_email1.json` and `outreach/wave5_email2.json` contain exactly the same 10 Wave 5 recipients, and `outreach/wave5_email2.json` contains the Wave 5 / Email 2 `email_id` values required for threaded replies.
+- `outreach/wave4_email3.json` confirms the established JSON schema for final follow-up logs: name, email, company, role, `thread reply`, date, reply target, sent `email_id`, status, and subject.
+- `content/outbound_log.md` already contains `Wave 5 — Email 1 (J1)` on `2026-05-01` and `Wave 5 — Email 2 (J+4)` on `2026-05-02`, so Wave 5 Email 3 should be appended as the next section plus a note documenting the timing mismatch relative to the requested `J+8` label.
+- `nanocorp emails send --help` confirms support for `--reply-to`, which is required to keep Email 3 in the existing thread started by Wave 5 / Email 2.
+
+### Planned execution
+
+- Send all 10 Wave 5 final follow-ups from `capia@nanocorp.app` using the provided copy with first-name and company personalization.
+- Send each email as a threaded reply using the corresponding `outreach/wave5_email2.json` `email_id` value as `--reply-to`.
+- Reconstruct and verify the final sent `email_id` values, write `outreach/wave5_email3.json`, update `content/outbound_log.md`, then commit and push `main`.
+
+### Action taken
+
+- Sent 10 `Wave 5 / Email 3` final follow-ups from `capia@nanocorp.app` on `2026-05-03`.
+- Used the task-provided copy with:
+  - first-name personalization
+  - company-name personalization
+  - subject `Dernier message — ShiftMap`
+  - link `https://www.shiftmap.fr`
+  - signature `L'équipe ShiftMap`
+- Sent all 10 emails as threaded replies using the corresponding Wave 5 / Email 2 `email_id` values as `--reply-to`.
+- Added `/home/worker/shiftmap/outreach/wave5_email3.json` with name, email, company, role, date, reply target, status, subject, and NanoCorp email IDs.
+- Updated `/home/worker/shiftmap/content/outbound_log.md` with a new `Wave 5 — Email 3 (J+8) — 2026-05-03` section plus note entries covering the subject, signature, link, and J+8/date mismatch.
+
+### Wave 5 final follow-up targets sent
+
+- Benoit Gervais — Yvert & Tellier — `contact@yvert.com` — `176c8068-a1d4-4036-83a4-c01a8be5398f`
+- Pascal Jehan — VETIGRAPH France — `secretariat@vetigraph.com` — `295c806c-c475-4245-be3f-be54478b043e`
+- Emmanuel Deret — ED-TRANS — `ederet@ed-trans.com` — `64928fa8-2307-440b-bca7-76523554cc77`
+- Frederic Chassard — BE WAY — `service.clients@beway.fr` — `16ed76b6-747d-4736-ad88-e89efd6e4dd4`
+- Nicolas Beaurain — ADELEC — `contact@agence-de-lenergie.com` — `f723a18a-dd39-40be-a9b8-295c083e6b3f`
+- Clement Bedbeder — Brasserie de Bretagne — `contact@brasserie-bretagne.fr` — `91ae5d2d-6742-4bdb-a872-99ba970f8c8d`
+- Romain Koller — Koller — `contact@koller.fr` — `9dca853f-ffa1-4dda-8886-8c1338735f7b`
+- Alexandre Dubost — Jean Dubost — `contact@jeandubost.com` — `5068e8b7-c129-4da4-966a-0622ad48fd9d`
+- Julien Bouvard — EXPELEC SA — `julien.bouvard@expelec.fr` — `8a606310-3ea6-4938-9c05-fb62b3b99935`
+- Laurence Baudel — FLUOPTICS — `dl-fluoptics-marketing@getinge.com` — `3dd57d30-2c12-4088-a37d-42b68684f1ff`
+
+### Verification
+
+- `nanocorp emails send` returned `success: true` and `status: sent` for all 10 sends, and exposed the final sent `email_id` values directly in the response.
+- The logged Wave 5 / Email 3 `reply_to_email_id` values match the corresponding `email_id` values in `outreach/wave5_email2.json` for all 10 recipients.
+
 ## Outbound Wave 4 Email 3 (J+8 final follow-up) (2026-05-02)
 
 ### Request checked
